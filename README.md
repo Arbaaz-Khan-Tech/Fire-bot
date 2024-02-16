@@ -71,7 +71,7 @@ This repository contains the source code for a real-time chat application focuse
 
 ## Contact
 
-For any inquiries or support, please contact [Arbaaz](mailto:arbukhan2016@gmail.com).
+For any inquiries or support, please contact [Arbaaz](mailto:arbukhan2016@gmail.com) / [Sudarshanxlr8](mailto:Sudarshanxlr8@gmail.com)
 
 ---
 
