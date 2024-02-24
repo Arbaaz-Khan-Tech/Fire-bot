@@ -217,7 +217,7 @@ h6,
 }
 
 .bg-offer {
-    background: linear-gradient(rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)), url(../img/carousel-2.jpg) top right no-repeat;
+    background: linear-gradient(rgba(18, 15, 45, .5), rgba(18, 15, 45, .5)), url(https://www.syandus.com/hubfs/Syandus/Blogs/EnhanceSkillLevel.jpg) top right no-repeat;
     background-size: cover;
 }
 
@@ -281,3 +281,15 @@ h6,
     border-color: transparent #D34351 #D34351 transparent;
     z-index: -1;
 }
+
+#Team{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) / -2);
+    margin-left: calc(var(--bs-gutter-x) / -2);
+    justify-content: center;
+}
+
