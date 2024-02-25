@@ -64,7 +64,7 @@ h6,
     width: 28px;
     height: 28px;
 }
-
+/* upper jaane wala button*/
 .btn-lg-square {
     width: 46px;
     height: 46px;
@@ -81,9 +81,10 @@ h6,
 .back-to-top {
     position: fixed;
     display: none;
-    right: 45px;
-    bottom: 45px;
+    right: 40px;
+    bottom: 0px;
     z-index: 99;
+    
 }
 
 .navbar-light .navbar-nav .nav-link {
