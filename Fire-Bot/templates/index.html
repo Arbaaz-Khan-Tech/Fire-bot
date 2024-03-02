@@ -45,10 +45,43 @@
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="signin.html" class="nav-item nav-link">login</a>
               
               
-                <a href="#" class="nav-item nav-link nav-contact bg-secondary text-white px-5 ms-lg-5"><i class="bi bi-telephone-outbound me-2"></i>The Future Is Here</a>
+                <nav class="navbar">
+                    <div class="navbar-toggle" onclick="toggleMenu()">
+                      <div class="line"></div>
+                      <div class="line"></div>
+                      <div class="disclose-option"></div>
+                    </div>
+                    <ul class="menu">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="service.html">Services</a></li>
+                      <li><a href="requirements.html">Requirements</a></li>
+                      <li><a href="feedback.html">Feedback</a></li>
+                      <li><a href="secondary research.html">Research</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="signin.html">Login</a></li>
+                      <li><a href="Profile Template/index.html">Profile</a></li>
+                    </ul>
+                  </nav> 
+                  
+                  
+                  <script>
+                 function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  const lines = document.querySelectorAll('.line');
+  const discloseOption = document.querySelector('.disclose-option');
+
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+  
+  lines.forEach(line => {
+    line.classList.toggle('cross');
+  });
+
+  discloseOption.classList.toggle('disclose');
+}
+                  </script>
             </div>
         </div>
     </nav>
@@ -282,10 +315,10 @@
             </div>
         </div>
     </div>
-    <!-- Pricing Plan End -->
+    <!-- Requirements End -->
 
 
-    <!-- Offer Start -->
+    <!-- Future enchancements Start -->
     <div class="container-fluid bg-offer my-5 py-5 wow zoomIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row gx-5 justify-content-center">
@@ -305,7 +338,7 @@
             </div>
         </div>
     </div>
-    <!-- Offer End -->
+    <!-- Future enchancements End -->
 
 
     <!-- Team Start -->
@@ -318,7 +351,7 @@
             </div>
             <div class="row g-5">
                 <div id="Team">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="col-lg-3 wow slideInUp" data-wow-delay="0.3s">
                     
                     <div class="bg-primary text-center rounded-bottom p-4">
                         <h3 class="text-white">Arbaaz Khan</h3>
@@ -339,7 +372,7 @@
                         <p class="text-white m-0">Backend Developer</p>
                     </div>
                 </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                <div class="col-lg-3 wow slideInUp" data-wow-delay="0.12s">
                    
                     <div class="bg-primary text-center rounded-bottom p-4">
                         <h3 class="text-white">Siddhi Mhatre</h3>
@@ -354,7 +387,7 @@
     <!-- Team End -->
 
 
-    <!-- Testimonial Start -->
+    <!-- Feedback Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
@@ -401,10 +434,10 @@
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+    <!-- Feedback End -->
 
 
-    <!-- Blog Start -->
+    <!-- Secondary research Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
@@ -453,7 +486,7 @@
             </div>
         </div>
     </div>
-    <!-- Blog End -->
+    <!-- Secondary research End -->
     
 
     <!-- Footer Start -->
@@ -486,7 +519,7 @@
                     <div class="d-flex">
                         <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#" target="_blank"><i class="fab fa-twitter fw-normal"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#" target="_blank"><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://www.linkedin.com/in/arbaaz-khan-717345259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="" target="_blank"><i class="fab fa-linkedin-in fw-normal"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#" target="_blank"><i class="fab fa-instagram fw-normal"></i></a>
                     </div>
                 </div>
@@ -502,10 +535,10 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Fire-Bot</a>. No Rights Reserved.</p>
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">FIRE-BOT </a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">Sudarshanxlr8</a></p>
+                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="">FIRE-BOT TEAM</a></p>
                 </div>
             </div>
         </div>

@@ -137,6 +137,67 @@ h6,
         padding: 10px 0;
     }
 }
+/* toggle bar ka css*/
+.carousel {
+    position: relative; /* Ensure relative positioning for z-index to work */
+    z-index: 1; /* Set z-index for carousel */
+  }
+  
+  .navbar {
+    background-color: #ffffff;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Ensure relative positioning for z-index to work */
+    z-index: 2; /* Set z-index higher than carousel */
+  }
+  
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 2px 0;
+    transition: transform 0.1s, opacity 0.1s;
+  }
+  
+  .disclose-option {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin-top: 2px;
+    transition: transform 0.1s, opacity 0.1s;
+  }
+  
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    z-index: 3; /* Ensure menu appears on top of carousel */
+  }
+  
+  .menu li {
+    list-style: none;
+  }
+  
+  .menu a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    color: #2878EB;
+  }
 
 .carousel-caption {
     top: 0;

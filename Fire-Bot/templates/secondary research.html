@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../static/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -35,7 +35,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm py-3 py-lg-0 px-3 px-lg-0">
         <a href="index.html" class="navbar-brand ms-lg-5">
-            <h1 class="display-5 m-0 text-primary">Safe<span class="text-secondary">Cam</span></h1>
+            <h1 class="display-5 m-0 text-primary">Fire<span class="text-secondary">Bot</span> <img src="../static/img/logo.png" style="height: 84px;"></h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -45,18 +45,42 @@
                 <a href="index.html" class="nav-item nav-link">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                        <a href="team.html" class="dropdown-item">The Team</a>
-                        <a href="testimonial.html" class="dropdown-item active">Testimonial</a>
+               
+                <nav class="navbar">
+                    <div class="navbar-toggle" onclick="toggleMenu()">
+                      <div class="line"></div>
+                      <div class="line"></div>
+                      <div class="disclose-option"></div>
                     </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                <a href="tel:+123456789" class="nav-item nav-link nav-contact bg-secondary text-white px-5 ms-lg-5"><i class="bi bi-telephone-outbound me-2"></i>+123 456 789</a>
+                    <ul class="menu">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="service.html">Services</a></li>
+                      <li><a href="requirements.html">Requirements</a></li>
+                      <li><a href="feedback.html">Feedback</a></li>
+                      <li><a href="secondary research.html">Research</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="signin.html">Login</a></li>
+                      <li><a href="Profile Template/index.html">Profile</a></li>
+                    </ul>
+                  </nav> 
+                  
+                  
+                  <script>
+                 function toggleMenu() {
+  const menu = document.querySelector('.menu');
+  const lines = document.querySelectorAll('.line');
+  const discloseOption = document.querySelector('.disclose-option');
+
+  menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+  
+  lines.forEach(line => {
+    line.classList.toggle('cross');
+  });
+
+  discloseOption.classList.toggle('disclose');
+}
+                  </script>
             </div>
         </div>
     </nav>
@@ -67,65 +91,68 @@
     <div class="container-fluid bg-primary p-5 hero-header mb-5">
         <div class="row py-5">
             <div class="col-12 text-center">
-                <h1 class="display-1 text-white animated zoomIn">Testimonial</h1>
-                <a href="" class="h4 text-white">Home</a>
+                <h1 class="display-1 text-white animated zoomIn">Secondary Research</h1>
+                <a href="index.html" class="h4 text-white">Home</a>
                 <i class="far fa-circle text-white px-2"></i>
-                <a href="" class="h4 text-white">Testimonial</a>
+                <a href="" class="h4 text-white">Secondary Research</a>
             </div>
         </div>
     </div>
     <!-- Hero End -->
 
 
-    <!-- Testimonial Start -->
+    <!-- Research Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h5>
-                <h1 class="display-5 mb-0">What People Say About Our Services</h1>
+                <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">Secondary Research</h5>
+                <h1 class="display-5 mb-0">Websites we visited for our secondary research</h1>
             </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="text-center pb-4">
-                    <img class="img-fluid mx-auto rounded-circle" src="img/testimonial-1.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-light rounded p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h4 class="text-truncate">Client Name</h4>
-                        <i>Profession</i>
+            <div class="row g-5">
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100 rounded-top" src="img/blog-1.jpg" alt="">
+                            <div class="blog-date">
+                                <h5 class="text-white fw-bold mb-0">24</h5>
+                                <h6 class="text-light mb-0">February</h6>
+                            </div>
+                        </div>
+                        <div class="bg-primary rounded-bottom p-5">
+                            <div class="d-flex mb-3">
+                                <span class="text-light text-uppercase"></span>
+                                <span class="text-light px-2">|</span>
+                                <span class="text-light text-uppercase">attack.mitre.org</span>
+                            </div>
+                            <a class="h3 m-0 text-white" href="https://attack.mitre.org/" target="_blank"> This framework provides a globally-recognized knowledge base of adversary tactics, techniques, and procedures (TTPs)</a>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center">
-                    <img class="img-fluid mx-auto rounded-circle" src="img/testimonial-2.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-light rounded p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h4 class="text-truncate">Client Name</h4>
-                        <i>Profession</i>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <img class="img-fluid mx-auto rounded-circle" src="img/testimonial-3.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-light rounded p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h4 class="text-truncate">Client Name</h4>
-                        <i>Profession</i>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <img class="img-fluid mx-auto rounded-circle" src="img/testimonial-4.jpg" style="width: 100px; height: 100px;" >
-                    <div class="testimonial-text bg-light rounded p-4 mt-n5">
-                        <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                        </p>
-                        <h4 class="text-truncate">Client Name</h4>
-                        <i>Profession</i>
+                <div class="col-lg-6 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="blog-item">
+                        <div class="position-relative">
+                            <img class="img-fluid w-100 rounded-top" src="img/blog-2.jpg" alt="">
+                            <div class="blog-date">
+                                <h5 class="text-white fw-bold mb-0">24</h5>
+                                <h6 class="text-light mb-0">February</h6>
+                            </div>
+                        </div>
+                        <div class="bg-primary rounded-bottom p-5">
+                            <div class="d-flex mb-3">
+                                <span class="text-light text-uppercase"></span>
+                                <span class="text-light px-2">|</span>
+                                <span class="text-light text-uppercase">Gartner.com</span>
+                            </div>
+                            <a class="h3 m-0 text-white" href="https://www.gartner.com/reviews/market/security-information-event-management" target="_blank">This report provides insights into the leading SIEM vendors and their capabilities for threat intelligence integration</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
-    
+    <!-- Secondary research End -->
+             
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -181,10 +208,10 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">FIRE-BOT</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="">FIRE-BOT TEAM</a></p>
                 </div>
             </div>
         </div>
