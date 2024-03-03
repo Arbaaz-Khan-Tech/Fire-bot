@@ -60,7 +60,7 @@
             contentType: 'application/json',
             data: JSON.stringify({ input: userInput }),
             success: function(data) {
-                chatContainer.append('<p>Chatbot: ' + data.response + '</p>');
+                chatContainer.append('<p>FireBot: ' + data.response + '</p>');
             },
             error: function(error) {
                 console.error('Error:', error);

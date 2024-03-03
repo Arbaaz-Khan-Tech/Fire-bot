@@ -1419,3 +1419,44 @@
 2024-03-03 23:34:03,468 - 127.0.0.1 - - [03/Mar/2024 23:34:03] "GET /static/img/chat-icon.jpeg HTTP/1.1" 200 -
 2024-03-03 23:34:03,576 - 127.0.0.1 - - [03/Mar/2024 23:34:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2024-03-03 23:34:22,554 - 127.0.0.1 - - [03/Mar/2024 23:34:22] "POST /chat HTTP/1.1" 200 -
+2024-03-03 23:45:26,212 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-03 23:45:26,212 - [33mPress CTRL+C to quit[0m
+2024-03-03 23:45:26,216 -  * Restarting with stat
+2024-03-03 23:45:30,509 -  * Debugger is active!
+2024-03-03 23:45:30,516 -  * Debugger PIN: 121-376-890
+2024-03-03 23:45:32,882 - 127.0.0.1 - - [03/Mar/2024 23:45:32] "GET / HTTP/1.1" 200 -
+2024-03-03 23:45:33,098 - 127.0.0.1 - - [03/Mar/2024 23:45:33] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:33,104 - 127.0.0.1 - - [03/Mar/2024 23:45:33] "[36mGET /static/js/signin.js HTTP/1.1[0m" 304 -
+2024-03-03 23:45:33,518 - 127.0.0.1 - - [03/Mar/2024 23:45:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-03-03 23:45:42,352 - 127.0.0.1 - - [03/Mar/2024 23:45:42] "POST /signin HTTP/1.1" 200 -
+2024-03-03 23:45:42,405 - 127.0.0.1 - - [03/Mar/2024 23:45:42] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:42,408 - 127.0.0.1 - - [03/Mar/2024 23:45:42] "[36mGET /static/js/signin.js HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,875 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "POST /signin HTTP/1.1" 200 -
+2024-03-03 23:45:51,933 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/lib/flaticon/font/flaticon.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,950 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/lib/animate/animate.min.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,950 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,952 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,961 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,963 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,978 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/img/slider1.jpg HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,981 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/img/slider2.jpg HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,982 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/img/slider3.jpg HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,996 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/lib/wow/wow.min.js HTTP/1.1[0m" 304 -
+2024-03-03 23:45:51,999 - 127.0.0.1 - - [03/Mar/2024 23:45:51] "[36mGET /static/img/about%20us.jpg HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,012 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[36mGET /static/lib/easing/easing.min.js HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,025 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[36mGET /static/lib/waypoints/waypoints.min.js HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,028 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[36mGET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,041 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,042 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[36mGET /static/img/camera.jpg HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,055 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[36mGET /static/img/threat.jpg HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,058 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[33mGET /img/blog-1.jpg HTTP/1.1[0m" 404 -
+2024-03-03 23:45:52,083 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[33mGET /img/blog-2.jpg HTTP/1.1[0m" 404 -
+2024-03-03 23:45:52,221 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-03-03 23:45:52,229 - 127.0.0.1 - - [03/Mar/2024 23:45:52] "[33mGET /static/img/chat-icon.png HTTP/1.1[0m" 404 -
+2024-03-03 23:45:53,935 - 127.0.0.1 - - [03/Mar/2024 23:45:53] "GET /chat_interface.html HTTP/1.1" 200 -
+2024-03-03 23:45:54,554 - 127.0.0.1 - - [03/Mar/2024 23:45:54] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-03-03 23:45:54,634 - 127.0.0.1 - - [03/Mar/2024 23:45:54] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-03-03 23:46:02,262 - 127.0.0.1 - - [03/Mar/2024 23:46:02] "POST /chat HTTP/1.1" 200 -
+2024-03-03 23:46:07,180 - 127.0.0.1 - - [03/Mar/2024 23:46:07] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-03-03 23:46:13,529 - 127.0.0.1 - - [03/Mar/2024 23:46:13] "POST /chat HTTP/1.1" 200 -
