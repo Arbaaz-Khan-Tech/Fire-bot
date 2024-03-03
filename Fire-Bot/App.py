@@ -1,4 +1,7 @@
 from flask import Flask,render_template,request,redirect
+import re
+import time
+from winotify import Notification, audio
 
 app = Flask(__name__)
 
@@ -14,11 +17,28 @@ def signin():
     username = request.form.get('username')
     password = request.form.get('password')
    
+   
 
     if username == valid_username and password == valid_password:
         # Successful login, redirect to a success page
         print("Successful login. Redirecting to service.html.")
         return render_template('index.html')
+    elif any(suspicious_pattern in username or suspicious_pattern in password for suspicious_pattern in ["'", "''", 'select', 'OR 1=1', 'AND 1=1', 'DROP TABLE', 'UNION SELECT', 
+                           'INSERT INTO', 'UPDATE SET', 'DELETE FROM', 'TRUNCATE TABLE', '--', '/*']):
+        # Notify about potential SQL injection attempt
+        toast = Notification (
+            app_id="Fire-Bot",
+            title="Fire-Bor",
+            msg="SQL Injection",
+            duration="short",
+         icon="E:\Organixed_Bot\static\img\chat-icon.chat-icon.jpeg"
+        )
+
+        toast.set_audio(audio.Mail,loop=False)
+        toast.show()
+        
+        # Redirect back to the signin page with an error message
+        return render_template('signin.html', error="Potential SQL injection attempt detected. Please try again.")
     else:
         # Failed login, redirect back to the signin page with an error message
         print("Failed login. Redirecting to contact.html.")
