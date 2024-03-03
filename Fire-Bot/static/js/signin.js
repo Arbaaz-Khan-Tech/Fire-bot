@@ -7,5 +7,6 @@ signUpButton.addEventListener('click', () => {
 });
 
 signInButton.addEventListener('click', () => {
+	console.log("Sign Up button clicked");
 	container.classList.remove("right-panel-active");
 });

@@ -1,10 +1,28 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request,redirect
 
 app = Flask(__name__)
 
 @app.route("/")
 def helloworld():
-    return render_template('index.html')
+    return render_template('signin.html')
+valid_username = 'arbaz@gmail.com'
+valid_password = '123'
+
+
+@app.route('/signin', methods=['POST'])
+def signin():
+    username = request.form.get('username')
+    password = request.form.get('password')
+   
+
+    if username == valid_username and password == valid_password:
+        # Successful login, redirect to a success page
+        print("Successful login. Redirecting to service.html.")
+        return render_template('index.html')
+    else:
+        # Failed login, redirect back to the signin page with an error message
+        print("Failed login. Redirecting to contact.html.")
+        return render_template('signin.html')
 
 @app.route("/about.html")
 def about():
@@ -58,9 +76,12 @@ def testimonial():
 
 
 
+@app.route("/index")
+def index():
+    return render_template('index.html')
 
 
-
+    
 
 
 
