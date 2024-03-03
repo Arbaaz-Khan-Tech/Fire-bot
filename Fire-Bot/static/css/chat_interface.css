@@ -1,0 +1,93 @@
+
+/* Chat Icon Styles */
+#chat-icon {
+    display: flex; /* Center the icon horizontally */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #chat-icon img {
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Chatbot Container Styles */
+  #chatbot-container {
+    background-color: #49ce5f; /* Set background color */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 10px; /* Add padding */
+    position: fixed; /* Fix the position of the chatbot */
+    bottom: 20px; /* Set bottom position from edge */
+    width: 98%;
+     
+  }
+  
+
+  /* Top Part Styles */
+  .top_part {
+    display: flex; /* Arrange elements horizontally */
+    align-items: center; /* Align elements vertically */
+    padding-bottom: 10px; /* Add padding for separation */
+    border-bottom: 1px solid #ddd; /* Add a dividing line */
+  }
+  
+  .top_part img {
+    width: 50px; /* Set image width */
+    height: 50px; /* Set image height */
+    margin-right: 10px; /* Add margin for spacing */
+  }
+  
+  /* Chat Container Styles */
+  #chat-container {
+    height: 200px; /* Set chat container height */
+    overflow-y: scroll; /* Enable scrolling for long conversations */
+    overflow-x: scroll;
+   
+  }
+  
+  #chat-container p {
+    margin: 0; /* Remove default margin */
+    padding: 5px 10px; /* Add padding for readability */
+    border-radius: 5px; /* Add rounded corners */
+    line-height: 1.5; /* Adjust line spacing for better readability */
+  }
+  
+  /* You Message Styles */
+  #chat-container p.you {
+    background-color: #eee; /* Set background color for user messages */
+    color: #333; /* Set text color for user messages */
+  }
+  
+  /* Chatbot Message Styles */
+  #chat-container p.chatbot {
+    background-color: #fafafa; /* Set background color for chatbot messages */
+    color: #000; /* Set text color for chatbot messages */
+    
+    /* Optionally, style the chatbot message differently (e.g., font weight) */
+    /* font-weight: bold; */
+  }
+  
+  /* User Input Styles */
+  #user-input {
+    width: 100%; /* Set input width to full container */
+    padding: 10px; /* Add padding for better user experience */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    margin-bottom: 5px; /* Add margin for spacing */
+  }
+  
+  /* Send Button Styles */
+  button {
+    background-color: #4CAF50; /* Set button background color */
+    color: white; /* Set button text color */
+    padding: 10px 20px; /* Add padding for better appearance */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  /* Optional: Hover effect for the button */
+  button:hover {
+    background-color: #3e8e41; /* Change background color on hover */
+  }
+  

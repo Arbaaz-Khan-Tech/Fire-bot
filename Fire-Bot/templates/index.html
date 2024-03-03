@@ -45,7 +45,7 @@
                 <a href="index.html" class="nav-item nav-link active">Home</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Service</a>
-              
+                <a href="chat_interface.html" class="nav-item nav-link">chat_interface</a>
               
                 <nav class="navbar">
                     <div class="navbar-toggle" onclick="toggleMenu()">
@@ -546,6 +546,52 @@
     <!-- Footer End -->
 
 
+
+<!-- Chat Interface Pop UP Start -->
+
+
+    <div id="chat-icon">
+        <img src="{{ url_for('static', filename='/img/chat-icon.png')}}" alt="Chat Icon" width="50px" height="50px" onclick="toggleChatbot()">
+      </div>
+      <div id="chatbot-container" class="hide">
+        
+        <div class="top_part">
+          <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="">
+          <p>Fire-Bot</p>
+        </div>
+        <div id="chat-container"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </section>
+      <script>
+        function toggleChatbot() {
+     document.getElementById("chatbot-container").style.display = "block";
+    }
+     
+        function sendMessage() {
+          var userInput = $('#user-input').val();
+          var chatContainer = $('#chat-container');
+          chatContainer.append('<p>You: ' + userInput + '</p>');
+     
+          $.ajax({
+            type: 'POST',
+            url: '/chat',
+            contentType: 'application/json',
+            data: JSON.stringify({ input: userInput }),
+            success: function(data) {
+              chatContainer.append('<p>Chatbot: ' + data.response + '</p>');
+            },
+            error: function(error) {
+              console.error('Error:', error);
+            }
+          });
+     
+          $('#user-input').val(''); // Clear input field after sending message
+        }
+      </script>
+
+<!-- Chat Interface Pop UP End -->
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-secondary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 

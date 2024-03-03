@@ -1,0 +1,10 @@
+flask
+google.generativeai
+cryptography.fernet
+psutil
+pynput
+matplotlib.pyplot
+scapy
+winotisy
+pillow opencv-python
+pytesseract
