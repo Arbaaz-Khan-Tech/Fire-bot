@@ -1,0 +1,40 @@
+<div id="chat-icon">
+        <img src="{{ url_for('static', filename='/img/chat-icon.png')}}" alt="Chat Icon" width="50px" height="50px" onclick="toggleChatbot()">
+      </div>
+      <div id="chatbot-container" class="hide">
+        
+        <div class="top_part">
+          <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="">
+          <p>Fire-Bot</p>
+        </div>
+        <div id="chat-container"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </section>
+      <script>
+        function toggleChatbot() {
+     document.getElementById("chatbot-container").style.display = "block";
+    }
+     
+        function sendMessage() {
+          var userInput = $('#user-input').val();
+          var chatContainer = $('#chat-container');
+          chatContainer.append('<p>You: ' + userInput + '</p>');
+     
+          $.ajax({
+            type: 'POST',
+            url: '/chat',
+            contentType: 'application/json',
+            data: JSON.stringify({ input: userInput }),
+            success: function(data) {
+              chatContainer.append('<p>FireBot: ' + data.response + '</p>');
+            },
+            error: function(error) {
+              console.error('Error:', error);
+            }
+          });
+     
+          $('#user-input').val(''); // Clear input field after sending message
+        }
+      </script>
