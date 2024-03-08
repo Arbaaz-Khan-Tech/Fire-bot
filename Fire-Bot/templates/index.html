@@ -607,12 +607,14 @@
         <div class="top_part">
           <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="">
           <p>Fire-Bot</p>
+          
+          
         </div>
         <div id="chat-container"></div>
         <input type="text" id="user-input" placeholder="Type your message...">
         <button onclick="sendMessage()">Send</button>
       </div>
-    </section>
+    
       <script>
         function toggleChatbot() {
      document.getElementById("chatbot-container").style.display = "block";
@@ -645,33 +647,7 @@
     <a href="#" class="btn btn-lg btn-secondary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- bot pop up ka code-->
-    <button id="floatingButton" class="floating-button">Bot</button>
-
-    <!-- Modal for displaying bot.html content -->
-    <div id="botModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <iframe id="botFrame" src="bot.html"></iframe>
-        </div>
-    </div>
-
-    <script>
-        // Function to open the modal and load bot.html content into the iframe
-function openModal() {
-    var modal = document.getElementById("botModal");
-    modal.style.display = "block";
-}
-
-// Function to close the modal
-function closeModal() {
-    var modal = document.getElementById("botModal");
-    modal.style.display = "none";
-}
-
-// Click event listener for the floating button
-document.getElementById("floatingButton").addEventListener("click", openModal);
-
+  
     </script>
 
 

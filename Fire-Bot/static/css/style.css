@@ -357,10 +357,15 @@ h6,
 
 /* Chat Icon Styles */
 #chat-icon {
-    display: flex; /* Center the icon horizontally */
-    justify-content: center;
-    align-items: center;
-  }
+    position: fixed;
+    bottom: 50px;
+    right: 20px; /* Adjust as needed */
+    transform: translateY(-50%);
+    z-index: 2; /* Set a high z-index to ensure it appears above other elements */
+}
+
+
+
   
   #chat-icon img {
     cursor: pointer; /* Change cursor to pointer on hover */
@@ -376,6 +381,7 @@ h6,
     bottom: 20px; /* Set bottom position from edge */
     right: 20px; /* Set right position from edge */
     display: none; /* Initially hide the chatbot */
+    z-index: 2;
   }
   
   .hide {
@@ -396,6 +402,7 @@ h6,
     margin-right: 10px; /* Add margin for spacing */
   }
   
+ 
   /* Chat Container Styles */
   #chat-container {
     height: 200px; /* Set chat container height */
