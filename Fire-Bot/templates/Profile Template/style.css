@@ -108,3 +108,16 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
     padding     : 0.85rem 1.5rem;
     border-color: rgba(24, 28, 33, 0.03) !important;
 }
+
+
+.OCR-Crypt{
+    display: flex;
+  }
+  
+  .left-div {
+    flex: 1; /* Adjust flex value as needed */
+  }
+  
+  .right-div {
+    flex: 1; /* Adjust flex value as needed */
+  }

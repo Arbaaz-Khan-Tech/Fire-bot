@@ -52,7 +52,7 @@ app = Flask(__name__,static_url_path='/static')
 
 def get_api_key():
     # Load API key from config.json
-    with open('config.json') as json_file:
+    with open(r'config.json') as json_file:
         data = json.load(json_file)
         return data.get('x-apikey')
 
@@ -63,7 +63,7 @@ xapi_key = get_api_key()
 
 def get_api_key():
     # Load API key from config.json
-    with open('config.json') as json_file:
+    with open(r'config.json') as json_file:
         data = json.load(json_file)
         return data.get('api_key')
 
@@ -285,8 +285,8 @@ def signin():
         # Notify about potential SQL injection attempt
         toast = Notification (
             app_id="Fire-Bot",
-            title="Fire-Bor",
-            msg="SQL Injection",
+            title="Fire-Bot",
+            msg="SQL Injection Detected",
             duration="short",
          icon="E:\Organixed_Bot\static\img\chat-icon.chat-icon.jpeg"
         )
