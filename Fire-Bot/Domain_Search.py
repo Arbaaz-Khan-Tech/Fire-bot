@@ -6,7 +6,7 @@ import json
 
 def get_api_key():
     # Load API key from config.json
-    with open(r'config.json') as json_file:
+ with open(r'E:\Fire-bot\Fire-Bot\config.json') as json_file:
         data = json.load(json_file)
         return data.get('x-apikey')
 
