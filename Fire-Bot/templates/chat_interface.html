@@ -9,185 +9,345 @@
     <link href="../static/css/chat_interface.css" rel="stylesheet">
 </head>
 <body>
-<div class="OCR-Crypt">
-<div class="left-div">
-<h1>Upload an Image</h1>
-{% if error %}
-    <p style="color: red;">{{ error }}</p>
-{% endif %}
-<form action="/" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" accept="image/*" required>
-    <br><br>
-    <button type="submit">Submit</button>
-</form>
-</div>
-<div class="right-div">
-<div id="chat-icon">
-    <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" onclick="toggleChatbot()">
-</div>
 
-<div class="crypt">
-    <input type="text" id="textInput" placeholder="Enter text to encrypt">
-    <button onclick="encryptText()">Encrypt Text</button>
+    <!-- side bar-->
+    <div class="sidebar-toggle" onclick="toggleSidebar()"></div> 
+    
+         <!-- side bar ka content-->
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-links">
+            <ul>
 
-    <!-- File Decryption -->
-    <input type="file" id="fileInput">
-    <button onclick="decryptFile()">Decrypt File</button>
+              <!-- image scanning yaha se start-->
+              <li>
+                <a href="#" class="popup-link" data-target="portfolio" title="Portfolio link">
+                  <div class="icon">
+                    <img src="../static/assets/image scan.svg" title="Portfolio Icon">
+                  </div>
+                  <span class="link hide">Image Scan</span>
+                </a>
+              </li>
+              <!-- image scanning yaha end-->
 
-<!-- Hashing Start -->
-    <input type="text" id="hashInput" placeholder="Enter text to hash">
+              <!-- encrypt / decrypt text start-->
+              <li>
+                <a href="#" class="popup-link" data-target="analytics" title="Analytics link">
+                  <div class="icon">
+                    <img src="../static/assets/encry_decry.svg" title="Analytics Icon">
+                  </div>
+                  <span class="link hide">Encrypt Text</span>
+                </a>
+              </li>
+              <!-- encrypt / decrypt text end-->
+
+              <!-- hashing start-->
+              <li>
+                <a href="#" class="popup-link" data-target="dashboard" title="Performance link">
+                  <div class="icon">
+                    <img src="../static/assets/hashing.svg" title="Performance Icon">
+                  </div>
+                  <span class="link hide">Hashing Text</span>
+                </a>
+              </li>
+              <!-- hashing end-->
+
+              <!-- start-->
+              <li>
+                <a href="#" class="popup-link" data-target="reports" title="Reports Link">
+                  <div class="icon">
+                    <img src="../static/assets/reports.svg" title="Reports Icon">
+                  </div>
+                  <span class="link hide">extras</span>
+                </a>
+              </li>
+              <!-- end-->
+            </ul>
+             
+            <!-- img scan popup start-->
+            <div class="popup" id="portfolio-popup">
+              <div class="popup-content">
+                <div class="left-div">
+                  <h1>Upload an Image</h1>
+                  {% if error %}
+                      <p style="color: red;">{{ error }}</p>
+                  {% endif %}
+                  <form action="/" method="post" enctype="multipart/form-data">
+                      <input type="file" name="file" accept="image/*" required>
+                      <br><br>
+                      <button type="submit">Submit</button>
+                  </form>
+                  </div>
+                  <div id="chat-icon">
+                      <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" onclick="toggleChatbot()">
+                  </div>   
+              </div>
+              <button class="close-btn">Close</button>
+            </div>
+            <!-- img scan popup end-->
+            
+            <!-- encrypt decrypt start-->
+            <div class="popup" id="analytics-popup">
+              <div class="popup-content">
+                <div class="crypt">
+                  <input type="text" id="textInput" placeholder="Enter text to encrypt">
+                  <button onclick="encryptText()">Encrypt Text</button>
+              
+                  <!-- File Decryption -->
+                  <input type="file" id="fileInput">
+                  <button onclick="decryptFile()">Decrypt File</button>
+                </div>
+              </div>
+              <button class="close-btn">Close</button>
+            </div>
+            <!-- encrypt decrypt end-->
+
+            <!-- hashing popup start-->
+            <div class="popup" id="dashboard-popup">
+              <div class="popup-content">
+                <input type="text" id="hashInput" placeholder="Enter text to hash">
     <button onclick="hashText()">Hash Text</button>
     <div id="hashedResult"></div>
+              </div>
+              <button class="close-btn">Close</button>
+            </div>
+            <!--hashing popup end-->
 
-<!-- Hashing End -->
-
-</div>
-</div>
-</div>
-<div id="chatbot-container" class="hide">
-  <div class="top_part">
-      <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="">
-      <p>Fire-Bot</p>
-  </div>
-  <div id="chat-container"></div>
-  <input type="text" id="user-input" placeholder="Type your message...">
-  <button onclick="sendMessage()">Send</button>
-  <button onclick="startSpeechRecognition()">Start Speech Recognition</button>
-</div>
-
-<script>
-    function toggleChatbot() {
-        document.getElementById("chatbot-container").style.display = "block";
-    }
-
-    function sendMessage() {
-        var userInput = $('#user-input').val();
-        var chatContainer = $('#chat-container');
-        chatContainer.append('<p>You: ' + userInput + '</p>');
-
-        $.ajax({
-            type: 'POST',
-            url: '/chat',
-            contentType: 'application/json',
-            data: JSON.stringify({ input: userInput }),
-            success: function(data) {
-                chatContainer.append('<p>FireBot: ' + data.response + '</p>');
-            },
-            error: function(error) {
-                console.error('Error:', error);
-            }
-        });
-
-        $('#user-input').val('');
-    }
-
-    function startSpeechRecognition() {
-    if ('webkitSpeechRecognition' in window) {
-        var recognition = new webkitSpeechRecognition(); // Create speech recognition object
-        recognition.lang = 'en-US'; // Set recognition language to English
-
-        // Define event handlers
-        recognition.onresult = function(event) {
-            var transcript = event.results[0][0].transcript; // Get recognized speech
-            $('#user-input').val(transcript); // Set recognized speech as user input
-        };
-
-        recognition.onerror = function(event) {
-            console.error('Speech recognition error:', event.error);
-        };
-
-        // Start speech recognition
-        recognition.start();
-    } else {
-        alert('Speech recognition is not supported in this browser.');
-    }
-}
-</script>
-
-<script>
- function encryptText() {
-    var text = document.getElementById("textInput").value;
-    var key = "your-secret-key"; // Replace with your actual encryption key
-
-    // Encrypt text
-    var encrypted = encryptMessage(text, key);
-
-    if (encrypted) {
-        // Save encrypted text to a file
-        saveToFile(encrypted);
-    } else {
-        // Handle case where no encrypted text is generated
-        alert("Encryption failed. Please check your input and try again.");
-    }
-}
-
-function encryptMessage(text, key) {
-    // Your encryption logic here
-    // Example using CryptoJS AES encryption
-    var encrypted = CryptoJS.AES.encrypt(text, key);
-    return encrypted.toString();
-}
-
-function saveToFile(text) {
-    // Your code to save text to a file here
-    // For example, you can create a Blob and download it as a file
-    var blob = new Blob([text], { type: "text/plain" });
-    var url = window.URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url;
-    a.download = "encrypted_text.txt";
-    document.body.appendChild(a);
-    a.click();
-    window.URL.revokeObjectURL(url);
-}
-
-
-function decryptFile() {
-    var fileInput = document.getElementById("fileInput");
-    var file = fileInput.files[0];
-    if (file) {
-        var reader = new FileReader();
-        reader.onload = function(event) {
-            var encryptedText = event.target.result;
-            var key = "your-secret-key"; // Replace with your actual encryption key
+            <!-- popup start-->
+            <div class="popup" id="reports-popup">
+              <div class="popup-content">
+                <!-- Reports Popup Content Goes Here -->
+                <p>This is the reports popup content.</p>
+              </div>
+              <button class="close-btn">Close</button>
+            </div>
+            <!-- popup end-->
             
-            // Decrypt text
-            var decrypted = decryptMessage(encryptedText, key);
-            
-            if (decrypted) {
-                // Display decrypted text
-                alert("Decrypted Text: " + decrypted);
-            } else {
-                alert("Decryption failed. Please check the encrypted text and try again.");
-            }
-        };
-        reader.readAsText(file);
-    } else {
-        alert("Please select a file to decrypt.");
-    }
+            <!-- popup ka script start-->
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+  const popupLinks = document.querySelectorAll('.popup-link');
+  const closeButtons = document.querySelectorAll('.close-btn');
+  const popups = document.querySelectorAll('.popup');
+
+  popupLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-target');
+      const popup = document.getElementById(targetId + '-popup');
+      if (popup) {
+        popup.style.display = 'block';
+      }
+    });
+  });
+
+  closeButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const popup = this.parentNode;
+      popup.style.display = 'none';
+    });
+  });
+
+  // Close popup when clicking outside of it
+  popups.forEach(function(popup) {
+    popup.addEventListener('click', function(event) {
+      if (event.target === this) {
+        this.style.display = 'none';
+      }
+    });
+  });
+});
+            </script>
+            <!-- popup ka script end-->
+
+          </div>
+      </div>
+      <!-- side bar enddd-->
+
+      <!-- chatbot container start-->
+      <div id="content">
+        <div id="chatbot-container" class="hide">
+            <div class="top_part">
+                <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="">
+                <p>Fire-Bot</p>
+            </div>
+            <div id="chat-container"></div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+            <button onclick="startSpeechRecognition()">Start Speech Recognition</button>
+          </div>
+          
+          <script>
+              function toggleChatbot() {
+                  document.getElementById("chatbot-container").style.display = "block";
+              }
+          
+              function sendMessage() {
+                  var userInput = $('#user-input').val();
+                  var chatContainer = $('#chat-container');
+                  chatContainer.append('<p>You: ' + userInput + '</p>');
+          
+                  $.ajax({
+                      type: 'POST',
+                      url: '/chat',
+                      contentType: 'application/json',
+                      data: JSON.stringify({ input: userInput }),
+                      success: function(data) {
+                          chatContainer.append('<p>FireBot: ' + data.response + '</p>');
+                      },
+                      error: function(error) {
+                          console.error('Error:', error);
+                      }
+                  });
+          
+                  $('#user-input').val('');
+              }
+          
+              function startSpeechRecognition() {
+              if ('webkitSpeechRecognition' in window) {
+                  var recognition = new webkitSpeechRecognition(); // Create speech recognition object
+                  recognition.lang = 'en-US'; // Set recognition language to English
+          
+                  // Define event handlers
+                  recognition.onresult = function(event) {
+                      var transcript = event.results[0][0].transcript; // Get recognized speech
+                      $('#user-input').val(transcript); // Set recognized speech as user input
+                  };
+          
+                  recognition.onerror = function(event) {
+                      console.error('Speech recognition error:', event.error);
+                  };
+          
+                  // Start speech recognition
+                  recognition.start();
+              } else {
+                  alert('Speech recognition is not supported in this browser.');
+              }
+          }
+          </script>
+          
+          <script>
+           function encryptText() {
+              var text = document.getElementById("textInput").value;
+              var key = "your-secret-key"; // Replace with your actual encryption key
+          
+              // Encrypt text
+              var encrypted = encryptMessage(text, key);
+          
+              if (encrypted) {
+                  // Save encrypted text to a file
+                  saveToFile(encrypted);
+              } else {
+                  // Handle case where no encrypted text is generated
+                  alert("Encryption failed. Please check your input and try again.");
+              }
+          }
+          
+          function encryptMessage(text, key) {
+              // Your encryption logic here
+              // Example using CryptoJS AES encryption
+              var encrypted = CryptoJS.AES.encrypt(text, key);
+              return encrypted.toString();
+          }
+          
+          function saveToFile(text) {
+              // Your code to save text to a file here
+              // For example, you can create a Blob and download it as a file
+              var blob = new Blob([text], { type: "text/plain" });
+              var url = window.URL.createObjectURL(blob);
+              var a = document.createElement("a");
+              a.href = url;
+              a.download = "encrypted_text.txt";
+              document.body.appendChild(a);
+              a.click();
+              window.URL.revokeObjectURL(url);
+          }
+          
+          
+          function decryptFile() {
+              var fileInput = document.getElementById("fileInput");
+              var file = fileInput.files[0];
+              if (file) {
+                  var reader = new FileReader();
+                  reader.onload = function(event) {
+                      var encryptedText = event.target.result;
+                      var key = "your-secret-key"; // Replace with your actual encryption key
+                      
+                      // Decrypt text
+                      var decrypted = decryptMessage(encryptedText, key);
+                      
+                      if (decrypted) {
+                          // Display decrypted text
+                          alert("Decrypted Text: " + decrypted);
+                      } else {
+                          alert("Decryption failed. Please check the encrypted text and try again.");
+                      }
+                  };
+                  reader.readAsText(file);
+              } else {
+                  alert("Please select a file to decrypt.");
+              }
+          }
+          
+          function decryptMessage(encryptedText, key) {
+              try {
+                  // Decrypt using CryptoJS AES decryption
+                  var decryptedBytes = CryptoJS.AES.decrypt(encryptedText, key);
+                  var decryptedText = decryptedBytes.toString(CryptoJS.enc.Utf8);
+                  return decryptedText;
+              } catch (error) {
+                  console.error("Decryption error:", error);
+                  return null;
+              }
+          }
+          
+          </script>
+          <script>
+              // Existing JavaScript code for chatbot and encryption/decryption functions...
+          
+              function hashText() {
+                  var textToHash = document.getElementById("hashInput").value;
+                  var hashedResult = CryptoJS.SHA256(textToHash).toString(CryptoJS.enc.Hex);
+                  document.getElementById("hashedResult").innerHTML = "Hashed Result: " + hashedResult;
+              }
+          </script>
+
+
+      </div>
+      <!-- chatbot container end-->
+      
+      <script>
+        function toggleDropdown(dropdown) {
+  var dropdownContent = dropdown.nextElementSibling;
+  dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+}
+     function toggleSidebar() {
+  var sidebar = document.getElementById('sidebar');
+  var content = document.getElementById('content');
+  if (sidebar.style.left === '-250px') {
+    sidebar.style.left = '0';
+    content.style.marginLeft = '250px';
+  } else {
+    sidebar.style.left = '-250px';
+    content.style.marginLeft = '50px';
+  }
 }
 
-function decryptMessage(encryptedText, key) {
-    try {
-        // Decrypt using CryptoJS AES decryption
-        var decryptedBytes = CryptoJS.AES.decrypt(encryptedText, key);
-        var decryptedText = decryptedBytes.toString(CryptoJS.enc.Utf8);
-        return decryptedText;
-    } catch (error) {
-        console.error("Decryption error:", error);
-        return null;
-    }
+function closeSidebar() {
+  var sidebar = document.getElementById('sidebar');
+  var content = document.getElementById('content');
+  sidebar.style.left = '-250px';
+  content.style.marginLeft = '50px';
 }
 
-</script>
-<script>
-    // Existing JavaScript code for chatbot and encryption/decryption functions...
 
-    function hashText() {
-        var textToHash = document.getElementById("hashInput").value;
-        var hashedResult = CryptoJS.SHA256(textToHash).toString(CryptoJS.enc.Hex);
-        document.getElementById("hashedResult").innerHTML = "Hashed Result: " + hashedResult;
-    }
-</script>
+      </script>
+
+
+
+
+
+    <!-- side bar-->
+    <!-- chat bot box -->
+
 </body>
 </html>
