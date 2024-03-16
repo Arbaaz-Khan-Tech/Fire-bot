@@ -13,6 +13,20 @@
   z-index: 999;
 }
 
+.vertical-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-text span {
+  writing-mode: horizontal-tb; /* Rotate the text vertically */
+  text-orientation: sideways-right; /* Change the text direction */
+  color: #fff; /* Text color */
+  font-size: 26px; /* Adjust font size as needed */
+  margin-bottom: 5px; /* Add space between letters */
+  padding-left: 15px;
+}
+
 .logo {
   padding: 10px;
   font-size: 20px;
@@ -104,7 +118,7 @@
   max-width: 600px; /* Max width to prevent stretching */
   max-height: 80%; /* Max height to prevent stretching */
   overflow: auto;
-  background-color: #000000;
+  background-color: #9156a0;
   border: 1px solid #ccc;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -119,6 +133,7 @@
   top: 10px;
   right: 10px;
   cursor: pointer;
+  background-color: #fa0606;
 }
 
 
@@ -138,18 +153,22 @@
   
   /* Chatbot Container Styles */
   #chatbot-container {
-    background-color: #49ce5f;
-    border: 1px solid #ddd;
+    background-image: linear-gradient(to right, #6cd3b496, #201f20);
+    border: 1px solid #793838;
     border-radius: 5px;
-    height: 590px;      
+    height: 560px;      
 }
+
     
   /* Top Part Styles */
   .top_part {
     display: flex; /* Arrange elements horizontally */
     align-items: center; /* Align elements vertically */
     padding-bottom: 10px; /* Add padding for separation */
+    padding-top: 10px;
+    padding-left: 570px;
     border-bottom: 1px solid #ddd; /* Add a dividing line */
+    color: #ddd;
   }
   
   .top_part img {
@@ -160,7 +179,7 @@
   
   /* Chat Container Styles */
   #chat-container {
-    height: 420px; /* Set chat container height */
+    height: 400px; /* Set chat container height */
     overflow-y: scroll; /* Enable scrolling for long conversations */
     overflow-x: scroll;
    
@@ -190,8 +209,8 @@
   
   /* User Input Styles */
   #user-input {
-    height: 40px;
-    width: 98%; /* Set input width to full container */
+    height: 35px;
+    width: 85%; /* Set input width to full container */
     padding: 10px; /* Add padding for better user experience */
     border: 1px solid #ddd; /* Add a border */
     border-radius: 5px; /* Add rounded corners */
