@@ -197,19 +197,32 @@
                   var chatContainer = $('#chat-container');
                   chatContainer.append('<p>You: ' + userInput + '</p>');
           
-                  $.ajax({
-                      type: 'POST',
-                      url: '/chat',
-                      contentType: 'application/json',
-                      data: JSON.stringify({ input: userInput }),
-                      success: function(data) {
-                          chatContainer.append('<p>FireBot: ' + data.response + '</p>');
-                      },
-                      error: function(error) {
-                          console.error('Error:', error);
-                      }
-                  });
-          
+                
+
+
+                // Display loading animation
+chatContainer.append('<p class="loading">Please wait...</p>');
+
+$.ajax({
+    type: 'POST',
+    url: '/chat',
+    contentType: 'application/json',
+    data: JSON.stringify({ input: userInput }),
+    success: function(data) {
+        // Remove loading animation
+        chatContainer.find('.loading').remove();
+
+        // Display response from backend
+        chatContainer.append('<p>FireBot: ' + data.response + '</p>');
+    },
+    error: function(error) {
+        // Remove loading animation
+        chatContainer.find('.loading').remove();
+
+        console.error('Error:', error);
+    }
+});
+
                   $('#user-input').val('');
               }
           
