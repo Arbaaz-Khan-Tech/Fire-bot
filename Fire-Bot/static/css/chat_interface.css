@@ -7,52 +7,45 @@
   background-color: #569986;
   color: #fff;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   cursor: pointer;
   z-index: 999;
+}     
+
+
+.imagess {
+  padding-top: 42px;
+  align-items: center;
 }
 
-.vertical-text {
-  display: flex;
-  flex-direction: column;
+.imagess img {
+  padding-left: 10px;
+  padding-bottom: 50px;
+  width: 1.625rem;
+  height: 1.625rem;
+  margin: auto;
 }
 
-.vertical-text span {
-  writing-mode: horizontal-tb; /* Rotate the text vertically */
-  text-orientation: sideways-right; /* Change the text direction */
-  color: #fff; /* Text color */
-  font-size: 26px; /* Adjust font size as needed */
-  margin-bottom: 5px; /* Add space between letters */
-  padding-left: 15px;
-}
-
-.logo {
-  padding: 10px;
-  font-size: 20px;
-}
-
-.menu-icon {
-  padding: 10px;
-  font-size: 24px;
-}
 
 .sidebar {
   position: fixed;
-  left: -250px;
+  left: -220px;
   top: 0;
-  width: 250px;
+  width: 200px;
   height: 100%;
+ 
   background-color: #569986;
   color: #fff;
   transition: left 0.3s ease;
   z-index: 998;
 }
 
+
 .sidebar a {
   display: block;
   padding: 10px 20px;
-  color: #fff;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -76,25 +69,15 @@
   color: var(--text-color);
   font-size: 1.25rem;
   display: flex;
-  align-items: center;
+  align-items: center; 
   height: 3.5rem;
   text-decoration: none;
   color: var(--text-color);
 }
 
-.icon {
-  display: flex;
-  align-items: center;
-}
-
-.icon img {
-  width: 1.625rem;
-  height: 1.625rem;
-  margin: auto;
-}
 
 .sidebar-links .link {
-  margin-left: 2.5rem;
+  padding-left: 15px;
 }
 
 .sidebar-links .active {
@@ -153,14 +136,14 @@
   
   /* Chatbot Container Styles */
   #chatbot-container {
-    background-image: linear-gradient(to right, #6cd3b496, #201f20);
-    border: 1px solid #793838;
-    border-radius: 5px;
-    height: 560px;      
-}
-
-    
-  /* Top Part Styles */
+    width: 1242px; /* Adjust width as needed */
+    background-color: #e2e2e2; /* Background color for the chatbot container */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: width 0.3s ease;
+  }
+  
   .top_part {
     display: flex; /* Arrange elements horizontally */
     align-items: center; /* Align elements vertically */
@@ -168,54 +151,37 @@
     padding-top: 10px;
     padding-left: 570px;
     border-bottom: 1px solid #ddd; /* Add a dividing line */
-    color: #ddd;
+    color: #000000;
   }
   
   .top_part img {
-    width: 50px; /* Set image width */
-    height: 50px; /* Set image height */
-    margin-right: 10px; /* Add margin for spacing */
+    width: 30px; /* Adjust as needed */
+    margin-right: 10px;
   }
   
-  /* Chat Container Styles */
   #chat-container {
-    height: 400px; /* Set chat container height */
-    overflow-y: scroll; /* Enable scrolling for long conversations */
-    overflow-x: scroll;
-   
+    height: 370px; /* Adjust max height for the chat container */
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+    padding: 10px;
+    background-color: #fff; /* Background color for the chat messages */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+ 
+  .sidebar-open .chatbot-container {
+    width: calc(100% - 350px); /* Adjust width considering sidebar */
   }
   
-  #chat-container p {
-    margin: 0; /* Remove default margin */
-    padding: 5px 10px; /* Add padding for readability */
-    border-radius: 5px; /* Add rounded corners */
-    line-height: 1.5; /* Adjust line spacing for better readability */
-  }
   
-  /* You Message Styles */
-  #chat-container p.you {
-    background-color: #eee; /* Set background color for user messages */
-    color: #333; /* Set text color for user messages */
-  }
-  
-  /* Chatbot Message Styles */
-  #chat-container p.chatbot {
-    background-color: #fafafa; /* Set background color for chatbot messages */
-    color: #000; /* Set text color for chatbot messages */
-    
-    /* Optionally, style the chatbot message differently (e.g., font weight) */
-    /* font-weight: bold; */
-  }
-  
-  /* User Input Styles */
   #user-input {
     height: 35px;
-    width: 85%; /* Set input width to full container */
-    padding: 10px; /* Add padding for better user experience */
-    border: 1px solid #ddd; /* Add a border */
-    border-radius: 5px; /* Add rounded corners */
-    margin-bottom: 5px; /* Add margin for spacing */
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Border color for the input */
+    border-radius: 5px;
+    margin-right: 10px;
   }
+  
   
   /* Send Button Styles */
   button {
@@ -234,33 +200,22 @@
   
 
   .loading {
-    position: relative;
-    width: 64px;
-    height: 64px;
-  }
-  
-  .loading:before {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    width: 50px;
-    height: 50px;
-    margin-top: -25px;
-    margin-left: -25px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    border-top-color: #007bff;
-    animation: spin 1s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.loading video {
+    width: 250px; /* Adjust the width of the video as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.loading p {
+    margin-top: 10px; /* Adjust the distance between video and text */
+    font-size: 24px; /* Adjust the font size of the text */
+    color: #333; /* Adjust the color of the text */
+}
+
   

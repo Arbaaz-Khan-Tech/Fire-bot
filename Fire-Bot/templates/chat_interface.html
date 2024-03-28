@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fire-Bot</title>
+    <link href="../static/img/favicon.ico" rel="icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <link href="../static/css/chat_interface.css" rel="stylesheet">
@@ -12,15 +13,12 @@
 
     <!-- side bar-->
     <div class="sidebar-toggle" onclick="toggleSidebar()">
-      <div class="vertical-text">
-        <span>F</span><br>
-        <span>E</span><br>
-        <span>A</span><br>
-        <span>T</span><br>
-        <span>U</span><br>
-        <span>R</span><br>
-        <span>E</span><br>
-        <span>S</span>
+      <div class="imagess">
+        <img src="../static/assets/home.svg" >
+        <img src="../static/assets/image scan.svg" >
+        <img src="../static/assets/encrypt.svg">
+        <img src="../static/assets/decrypt.svg">
+        <img src="../static/assets/hashing.svg">
       </div>
     </div>
     
@@ -29,12 +27,16 @@
         <div class="sidebar-links">
             <ul>
 
+              <li>
+                <a href="../templates/index.html"> 
+                  <span class="link hide">Home</span>
+                </a>
+              </li>
+
               <!-- image scanning yaha se start-->
               <li>
                 <a href="#" class="popup-link" data-target="portfolio" title="Portfolio link">
-                  <div class="icon">
-                    <img src="../static/assets/image scan.svg" title="Portfolio Icon">
-                  </div>
+                  
                   <span class="link hide">Image Scan</span>
                 </a>
               </li>
@@ -43,9 +45,7 @@
               <!-- encrypt / decrypt text start-->
               <li>
                 <a href="#" class="popup-link" data-target="analytics" title="Analytics link">
-                  <div class="icon">
-                    <img src="../static/assets/encrypt.svg" title="Analytics Icon">
-                  </div>
+                 
                   <span class="link hide">Encrypt Text</span>
                 </a>
               </li>
@@ -54,9 +54,7 @@
               <!-- start-->
               <li>
                 <a href="#" class="popup-link" data-target="reports" title="Reports Link">
-                  <div class="icon">
-                    <img src="../static/assets/decrypt.svg" title="Reports Icon">
-                  </div>
+                  
                   <span class="link hide">Decrypt Text</span>
                 </a>
               </li>
@@ -65,9 +63,7 @@
               <!-- hashing start-->
               <li>
                 <a href="#" class="popup-link" data-target="dashboard" title="Performance link">
-                  <div class="icon">
-                    <img src="../static/assets/hashing.svg" title="Performance Icon">
-                  </div>
+                  
                   <span class="link hide">Hashing Text</span>
                 </a>
               </li>
@@ -87,21 +83,21 @@
               <form action="/" method="post" enctype="multipart/form-data">
                   <input type="file" name="file" accept="image/*" required style="margin-bottom: 10px;">
                   <br><br>
-                  <button type="submit" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Submit</button>
+                  <button type="submit" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Submit</button>
               </form>
-              <button class="close-btn" style="background-color: #ff0000; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">Close</button>
+              <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
             </div>
             
             <!-- img scan popup end-->
             
             <!-- encrypt start-->
-            <div class="popup" id="analytics-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="popup" id="analytics-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter Text To Encrypt</p>
               
                   <input type="text" id="textInput" placeholder="Enter text to encrypt">
-                  <button onclick="encryptText()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Encrypt Text</button> 
-              <button class="close-btn" style="background-color: #ff0000; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">Close</button>
+                  <button onclick="encryptText()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Encrypt Text</button> 
+                  <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
             </div>
             <!-- encrypt decrypt end-->
 
@@ -110,8 +106,8 @@
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter File To Decrypt</p>
                   <input type="file" id="fileInput">
-                  <button onclick="decryptFile()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">Decrypt File</button>   
-              <button class="close-btn" style="background-color: #ff0000; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">Close</button>
+                  <button onclick="decryptFile()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Decrypt File</button>   
+                  <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
             </div>
             <!-- decrypt end-->
 
@@ -120,11 +116,11 @@
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter Text For Hashing</p>
               <input type="text" id="hashInput" placeholder="Enter text to hash">
-              <button onclick="hashText()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">Hash Text</button>
+              <button onclick="hashText()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Hash Text</button>
                 <div id="hashedResult" style="border: 1px solid #ccc; padding: 10px; margin-top: 10px; margin-bottom: 20px; width: 200px; word-wrap: break-word; margin: 0 auto;"></div>
 
               
-                <button class="close-btn" style="background-color: #ff0000; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">Close</button>
+                <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
             </div>
             <!--hashing popup end-->
 
@@ -201,7 +197,10 @@
 
 
                 // Display loading animation
-chatContainer.append('<p class="loading">Please wait...</p>');
+                chatContainer.append("<p class='loading'><video src='{{ url_for('static', filename='img/loader.mp4')}}' autoplay loop></video></p>");
+chatContainer.find('.loading').append("<p>Loading...</p>");
+
+
 
 $.ajax({
     type: 'POST',
@@ -225,6 +224,7 @@ $.ajax({
 
                   $('#user-input').val('');
               }
+               // Display loading animation
           
               function startSpeechRecognition() {
               if ('webkitSpeechRecognition' in window) {
@@ -344,23 +344,25 @@ $.ajax({
   var dropdownContent = dropdown.nextElementSibling;
   dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
 }
-     function toggleSidebar() {
-  var sidebar = document.getElementById('sidebar');
-  var content = document.getElementById('content');
-  if (sidebar.style.left === '-250px') {
-    sidebar.style.left = '0';
-    content.style.marginLeft = '250px';
-  } else {
-    sidebar.style.left = '-250px';
-    content.style.marginLeft = '50px';
-  }
+function toggleSidebar() {
+    var sidebar = document.getElementById('sidebar');
+    var chatbotContainer = document.getElementById('chatbot-container');
+    
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px';
+        chatbotContainer.style.left = '0'; // Set chatbot container to start position
+    } else {
+        sidebar.style.left = '0';
+        chatbotContainer.style.left = '250px'; // Slide chatbot container to the right
+    }
 }
 
 function closeSidebar() {
-  var sidebar = document.getElementById('sidebar');
-  var content = document.getElementById('content');
-  sidebar.style.left = '-250px';
-  content.style.marginLeft = '50px';
+    var sidebar = document.getElementById('sidebar');
+    var chatbotContainer = document.getElementById('chatbot-container');
+    
+    sidebar.style.left = '-250px';
+    chatbotContainer.style.left = '0'; // Set chatbot container to start position
 }
 
 
