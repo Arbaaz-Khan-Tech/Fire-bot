@@ -172,6 +172,30 @@
             <div class="top_part">
                 <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="">
                 <b>Fire-Bot</b>
+
+                <!-- dark mode button start-->
+                <button onclick="toggleDarkMode()" id="dark-mode-toggle" style="background: none; border: none; cursor: pointer; text-align: center; padding: 0px;">
+                  <img src="../static/img/moon.png" alt="moon" style="width: 40px; padding-left: 470px;">
+                </button>
+                <button onclick="toggleLightMode()" id="dark-mode-toggle" style="background: none; border: none; cursor: pointer; text-align: center; padding: 0px;">
+                  <img src="../static/img/sun.png" alt="sun" style="width: 40px;">
+                </button>
+
+                <script>
+                function toggleLightMode() {
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (chatbotContainer.classList.contains('dark-mode')) {
+                chatbotContainer.classList.remove('dark-mode');
+                } }
+
+                function toggleDarkMode() {
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (!chatbotContainer.classList.contains('dark-mode')) {
+                chatbotContainer.classList.add('dark-mode');
+                }}
+                </script>
+                <!-- dark mode button end-->
+
             </div>
             <div id="chat-container"></div>
             <input type="text" id="user-input" placeholder="Type your message...">
@@ -181,6 +205,7 @@
               <button onclick="startSpeechRecognition()" style="background: none; border: none; cursor: pointer; text-align: center; padding: 0px;">
                 <img src="../static/img/microphone.png" alt="Microphone" style="width: 40px;"></button>
               
+                
           </div>
           
           <script>
@@ -197,7 +222,7 @@
 
 
                 // Display loading animation
-                chatContainer.append("<p class='loading'><video src='{{ url_for('static', filename='img/loader.mp4')}}' autoplay loop></video></p>");
+                chatContainer.append("<p class='loading'><video src='{{ url_for('static', filename='img/xy.mp4')}}' autoplay loop></video></p>");
 chatContainer.find('.loading').append("<p>Loading...</p>");
 
 

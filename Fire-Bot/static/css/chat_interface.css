@@ -134,7 +134,7 @@
     cursor: pointer; /* Change cursor to pointer on hover */
   }
   
-  /* Chatbot Container Styles */
+  /* Chatbot Container Styles start */
   #chatbot-container {
     width: 1242px; /* Adjust width as needed */
     background-color: #e2e2e2; /* Background color for the chatbot container */
@@ -143,6 +143,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
     transition: width 0.3s ease;
   }
+  
   
   .top_part {
     display: flex; /* Arrange elements horizontally */
@@ -182,23 +183,38 @@
     margin-right: 10px;
   }
   
+  /* dark mode ka css start */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #chat-container {
+  background-color: #444;
+}
+
+.dark-mode #user-input {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #888;
+}
+
+  /* dark mode ka css end */
   
-  /* Send Button Styles */
+  
+  /* icon buttons start */
   button {
-    background-color: #4CAF50; /* Set button background color */
-    color: white; /* Set button text color */
+   
     padding: 10px 20px; /* Add padding for better appearance */
     border: none; /* Remove default border */
     border-radius: 5px; /* Add rounded corners */
     cursor: pointer; /* Change cursor to pointer on hover */
   }
+  /* icon buttons end*/
   
-  /* Optional: Hover effect for the button */
-  button:hover {
-    background-color: #3e8e41; /* Change background color on hover */
-  }
+/* Chatbot Container Styles end */
   
-
+/* loading ka css start */
   .loading {
     position: fixed;
     top: 50%;
@@ -217,5 +233,5 @@
     font-size: 24px; /* Adjust the font size of the text */
     color: #333; /* Adjust the color of the text */
 }
-
+/* loading ka css end */
   
