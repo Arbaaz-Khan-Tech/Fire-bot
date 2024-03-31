@@ -1,3 +1,4 @@
+/* side bar start*/
 .sidebar-toggle {
   position: fixed;
   left: 0;
@@ -90,7 +91,7 @@
 
 
 
-/* Popup styles */
+/* Popup styles start */
 .popup {
   display: none;
   position: fixed;
@@ -119,8 +120,25 @@
   background-color: #fa0606;
 }
 
-
-/* side bar*/
+/* popup table startt*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+}
+th {
+  color: #ffffff;
+  background-color: #569986;
+}
+/*table end*/
+/*popup style end*/
+/* side bar end*/
 
 
 /* Chat Icon Styles */
@@ -185,7 +203,7 @@
   
   /* dark mode ka css start */
 .dark-mode {
-  background-color: #333;
+  background-color: #363030;
   color: #fff;
 }
 
@@ -234,4 +252,4 @@
     color: #333; /* Adjust the color of the text */
 }
 /* loading ka css end */
-  
+ 

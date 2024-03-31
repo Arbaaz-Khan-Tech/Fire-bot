@@ -19,6 +19,7 @@
         <img src="../static/assets/encrypt.svg">
         <img src="../static/assets/decrypt.svg">
         <img src="../static/assets/hashing.svg">
+        <img src="../static/assets/help.svg">
       </div>
     </div>
     
@@ -68,7 +69,17 @@
                 </a>
               </li>
               <!-- hashing end-->
+              
+              <!-- more start-->
 
+              <li>
+                <a href="#" class="popup-link" data-target="more" title="help link">
+                  
+                  <span class="link hide">More / Help</span>
+                </a>
+              </li>
+
+              <!-- more end -->
               
             </ul>
              
@@ -91,24 +102,27 @@
             <!-- img scan popup end-->
             
             <!-- encrypt start-->
-            <div class="popup" id="analytics-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+            <div class="popup" id="analytics-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter Text To Encrypt</p>
-              
-                  <input type="text" id="textInput" placeholder="Enter text to encrypt">
-                  <button onclick="encryptText()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Encrypt Text</button> 
-                  <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
-            </div>
+              <input type="text" id="textInput" placeholder="Enter text to encrypt">
+              <button onclick="encryptText()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Encrypt Text</button> 
+              <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
+          </div>
+            
             <!-- encrypt decrypt end-->
 
             <!-- decrypt start-->
             <div class="popup" id="reports-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter File To Decrypt</p>
-                  <input type="file" id="fileInput">
-                  <button onclick="decryptFile()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Decrypt File</button>   
-                  <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
-            </div>
+              <input type="file" id="fileInput">
+              <input type="password" id="passwordInput" placeholder="Enter password">
+              <button onclick="decryptFile()" style="background-color: #4CAF50; color: rgb(231, 231, 231); padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;" onmouseover="this.style.backgroundColor='#7FFF7F'; this.style.color='black';" onmouseout="this.style.backgroundColor='#4CAF50'; this.style.color='rgb(231, 231, 231)';">Decrypt File</button>   
+              <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
+          </div>
+
+            
             <!-- decrypt end-->
 
             <!-- hashing popup start-->
@@ -124,6 +138,60 @@
             </div>
             <!--hashing popup end-->
 
+            <!-- more ka popup start-->
+
+            <div class="popup" id="more-popup" style="width: 500px; height: 450px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+              <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
+              <p style="font-size: 18px; margin-bottom: 10px;">List of Commands</p>
+              
+              <table>
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Function</th>
+                        <th>Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Camera Check</td>
+                        <td>Checks Whether camera is on or not</td>
+                        <td>Camera is On OR Camera Is off</td>
+                    </tr>
+                    <tr>
+                        <td>Check Network Traffic</td>
+                        <td>Captures network traffic</td>
+                        <td>Generates graph of Top IP Talkers</td>
+                    </tr>
+                    <tr>
+                        <td>Scan File</td>
+                        <td>Can scan a file</td>
+                        <td>File is safe or not</td>
+                    </tr>
+                    <tr>
+                        <td>Any IP (1.1.1.1)</td>
+                        <td>Gives info about IP address</td>
+                        <td>Json format</td>
+                    </tr>
+                    <tr>
+                        <td>URL (Instagram.com)</td>
+                        <td>Scans the domain</td>
+                        <td>Tells whether site is safe or not</td>
+                    </tr>
+                    <tr>
+                        <td>Analyze log</td>
+                        <td>Analyses Log file</td>
+                        <td>Tells whether issue is found or not</td>
+                    </tr>
+                </tbody>
+            </table>
+
+              
+                <button class="close-btn" style="background-color: white; color: black; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px; padding: 5px 10px;" onmouseover="this.style.backgroundColor='#ff0000'; this.style.color='white';" onmouseout="this.style.backgroundColor='white'; this.style.color='black';">Close</button>
+            </div>            
+
+            <!-- more ka popup end-->    
+            
             
             <!-- popup ka script start-->
             <script>
@@ -275,81 +343,93 @@ $.ajax({
           </script>
           
           <script>
-           function encryptText() {
-              var text = document.getElementById("textInput").value;
-              var key = "your-secret-key"; // Replace with your actual encryption key
-          
-              // Encrypt text
-              var encrypted = encryptMessage(text, key);
-          
-              if (encrypted) {
-                  // Save encrypted text to a file
-                  saveToFile(encrypted);
-              } else {
-                  // Handle case where no encrypted text is generated
-                  alert("Encryption failed. Please check your input and try again.");
-              }
-          }
-          
-          function encryptMessage(text, key) {
-              // Your encryption logic here
-              // Example using CryptoJS AES encryption
-              var encrypted = CryptoJS.AES.encrypt(text, key);
-              return encrypted.toString();
-          }
-          
-          function saveToFile(text) {
-              // Your code to save text to a file here
-              // For example, you can create a Blob and download it as a file
-              var blob = new Blob([text], { type: "text/plain" });
-              var url = window.URL.createObjectURL(blob);
-              var a = document.createElement("a");
-              a.href = url;
-              a.download = "encrypted_text.txt";
-              document.body.appendChild(a);
-              a.click();
-              window.URL.revokeObjectURL(url);
-          }
-          
-          
-          function decryptFile() {
-              var fileInput = document.getElementById("fileInput");
-              var file = fileInput.files[0];
-              if (file) {
-                  var reader = new FileReader();
-                  reader.onload = function(event) {
-                      var encryptedText = event.target.result;
-                      var key = "your-secret-key"; // Replace with your actual encryption key
-                      
-                      // Decrypt text
-                      var decrypted = decryptMessage(encryptedText, key);
-                      
-                      if (decrypted) {
-                          // Display decrypted text
-                          alert("Decrypted Text: " + decrypted);
-                      } else {
-                          alert("Decryption failed. Please check the encrypted text and try again.");
-                      }
-                  };
-                  reader.readAsText(file);
-              } else {
-                  alert("Please select a file to decrypt.");
-              }
-          }
-          
-          function decryptMessage(encryptedText, key) {
-              try {
-                  // Decrypt using CryptoJS AES decryption
-                  var decryptedBytes = CryptoJS.AES.decrypt(encryptedText, key);
-                  var decryptedText = decryptedBytes.toString(CryptoJS.enc.Utf8);
-                  return decryptedText;
-              } catch (error) {
-                  console.error("Decryption error:", error);
-                  return null;
-              }
-          }
-          
-          </script>
+    function encryptText() {
+        var text = document.getElementById("textInput").value.trim();
+        var password = prompt("Enter password to encrypt the file:"); // Prompt user for password
+
+        if (!text) {
+            alert("Please enter some text to encrypt.");
+            return;
+        }
+
+        if (!password) {
+            alert("Please enter a valid password.");
+            return;
+        }
+
+        try {
+            var encrypted = encryptMessage(text, password);
+
+            if (encrypted) {
+                saveToFile(encrypted);
+            } else {
+                alert("Encryption failed. Please check your input and try again.");
+            }
+        } catch (error) {
+            console.error("Encryption error:", error);
+            alert("Encryption failed. Please check your input and try again.");
+        }
+    }
+
+    function encryptMessage(text, password) {
+        try {
+            // Encrypt text with password
+            var encrypted = CryptoJS.AES.encrypt(text, password).toString();
+            return encrypted;
+        } catch (error) {
+            console.error("Encryption error:", error);
+            return null;
+        }
+    }
+
+    function saveToFile(text) {
+        // Your code to save text to a file here
+        // For example, you can create a Blob and download it as a file
+        var blob = new Blob([text], { type: "text/plain" });
+        var url = window.URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "encrypted_text.txt";
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+    }
+
+    function decryptFile() {
+        var fileInput = document.getElementById("fileInput");
+        var file = fileInput.files[0];
+        var password = prompt("Enter password to decrypt the file:"); // Prompt user for password
+
+        if (file && password) { // Check if file is selected and password is provided
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var encryptedText = event.target.result;
+                var decrypted = decryptMessage(encryptedText, password);
+
+                if (decrypted) {
+                    alert("Decrypted Text: " + decrypted);
+                } else {
+                    alert("Decryption failed. Please check the password and try again.");
+                }
+            };
+            reader.readAsText(file);
+        } else {
+            alert("Please select a file to decrypt and enter the password.");
+        }
+    }
+
+    function decryptMessage(encryptedText, password) {
+        try {
+            // Decrypt text with password
+            var decrypted = CryptoJS.AES.decrypt(encryptedText, password).toString(CryptoJS.enc.Utf8);
+            return decrypted;
+        } catch (error) {
+            console.error("Decryption error:", error);
+            return null;
+        }
+    }
+</script>
+
           <script>
               // Existing JavaScript code for chatbot and encryption/decryption functions...
           
