@@ -1,0 +1,2 @@
+2024-03-23 15:30:45 - INFO - Email sent from sender@example.com to recipient1@example.com, recipient2@example.com with subject 'Meeting Agenda' and file attachment size 2.5 MB
+2024-03-23 16:45:12 - INFO - Email sent from sender@example.com to recipient3@example.com with subject 'Quarterly Report' and file attachment size 7.8 MB

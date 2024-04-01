@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect
+from flask import Flask,render_template,request,redirect,session,url_for
 import re
 import time
 from winotify import Notification, audio
@@ -8,6 +8,7 @@ import random
 import string
 import IP_Search
 import Domain_Search
+import Log_Analyse
 import Camera_Check
 import Network_Traffic_Capture 
 from File_Scan import scan_file_with_defender
@@ -27,12 +28,17 @@ from winotify import Notification,audio
 import speech_recognition as sr
 from datetime import datetime
 from notify_run import Notify
+import Brute_Detection
+import psutil
 
 notify = Notify()
 
 
-app = Flask(__name__)
 
+
+
+app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 
 def process_input(user_input):
@@ -107,7 +113,7 @@ def ocr():
     if request.method == 'POST':
         # Check if the POST request has the file part
         if 'file' not in request.files:
-            return render_template('signin.html', error='No file pachat_interface')
+            return render_template('chat_interface.html', error='No file pachat_interface')
         file = request.files['file']
         # If user does not select file, browser also submit an empty part without filename
         if file.filename == '':
@@ -137,8 +143,8 @@ def ocr():
                         toast.show()
                         break  # Break out of loop after detecting unsafe URL
 
-            return render_template('signin.html', text=text)
-    return render_template('signin.html')
+            return render_template('chat_interface.html', text=text)
+    return render_template('chat_interface.html')
 
 
 
@@ -197,10 +203,7 @@ def process_input(user_input):
     elif user_input.endswith(".com") or user_input.endswith(".net") or user_input.endswith(".org"):
         domain_search_result = Domain_Search.search_domain(user_input)
         return domain_search_result
-    elif user_input.lower() == "generate password for me":
-        username = input("Enter your username: ")  # Modify this for web input
-        password = generate_password(username)
-        return "Generated password: " + password
+
     elif user_input.lower() == "check network traffic":
         Network_Traffic_Capture.perform_capture()
         return "Network traffic captured"
@@ -210,7 +213,81 @@ def process_input(user_input):
         file_path = input("Enter the path of the file to be scanned: ")  # Modify this for web input
         scan_result = scan_file_with_defender(file_path)
         return scan_result
- 
+
+    elif user_input.lower() == "generate password for me":
+        username = input("Enter your username: ")  # Modify this for web input
+        password = generate_password(username)
+        return "Generated password: " + password
+    elif user_input.lower() == "analyze log":
+        log_file_path = "E:\\Fire-bot\\Fire-Bot\\Net_Log.txt"
+        threat_detected = Log_Analyse.analyze_log_file(log_file_path)
+        if threat_detected:
+            return "Threat detected! Take necessary action. Login after 8 pm and malicious IP detected"
+        else:
+            return "No threat detected."
+    elif user_input.lower() == "bruteforce log":
+        log_entries_file = "E:\\Fire-bot\\Fire-Bot\\Login._Log.json"
+        brute_force_attacks = Brute_Detection.detect_brute_force_attacks(log_entries_file)
+        if brute_force_attacks:
+            response = "Brute force attacks detected:\n"
+            for attack in brute_force_attacks:
+                response += f"Timestamp: {attack[0]}, IP Address: {attack[1]}\n"
+            return response
+    elif user_input.lower() == "simulation":
+    # This block will only execute when user_input is "simulation"
+      result = "Type 'phishing_email', 'urgent_phone_call', 'fake_website', or 'pretexting_call'"
+      return result
+
+    elif user_input.lower() == "phishing_email":
+        result = "Imagine you receive an email with the subject line Urgent Action Required: Verify Your Account.  The email appears to be from your bank and claims suspicious activity on your accoun It includes a link asking you to 'log in and confirm your details immediately. What would you do? Reply with 'click_the_link' or 'verify_mail'"   
+        return result
+    elif user_input.lower() == "click_the_link":    
+        result = "Uh oh! Clicking the link could lead to a fake website designed to steal your login credentials. Always verify the email's authenticity before clicking any links."
+        return result 
+    elif user_input.lower() == "verify_mail": 
+        result = "Great job! Here are some tips for verifying email legitimacy Check the sender's email address for typos or inconsistencies with your bank's official domain. Hover over the link to see the actual destination URL before clicking. Contact your bank directly using a phone number you know is correct, not one provided in the email."    
+        return result
+    elif  user_input.lower() == "urgent_phone_call":
+     result = """Imagine you receive a call from someone claiming to be from your internet service provider (ISP).
+They claim there's a critical issue with your account and that your internet will be shut down if you don't act immediately.
+They ask you to download a remote access tool to 'fix the problem.'
+What would you do? (Reply with 'download_the_tool' or 'verify_caller')"""
+     return result
+
+    elif user_input.lower() == "download_the_tool":
+     result = "Uh oh! Downloading an unknown tool could grant the caller remote access to your computer, allowing them to steal your data or install malware. Never download software from unsolicited sources."
+     return result
+
+    elif user_input.lower() == "verify_caller":
+      result = """Excellent! Here's how to verify the caller's identity:
+- Ask for their name and employee ID.
+- Tell them you'll call them back at a phone number you know is genuine (look it up on your ISP's website).
+- Don't give out any personal information or download anything until you've confirmed their legitimacy."""
+      return result
+    elif  user_input.lower() == "fake_website":
+     result = """Imagine you're searching online for a popular software download.
+You find a website with a familiar-looking logo and download the software.
+What's a potential consequence of this action? (Reply with 'malware_infection' or 'data_theft')"""
+     return result
+    elif  user_input.lower() == "malware_infection":
+        result = "Correct! The website could be fake, and the downloaded software might be infected with malware that steals your data or harms your computer"
+        return result
+    elif  user_input.lower() == "data_theft":
+        result = "Both malware infection and data theft are potential consequences. Always download software from trusted sources, like the official website of the software provider."
+        return result
+    elif  user_input.lower() == "pretexting_call":
+        result = "Imagine you receive a call from someone claiming to be from your credit card company.The caller asks for your credit card number for 'verification purposes.' What would you do? (Reply with 'provide_number' or 'refuse'"
+        return result 
+    elif  user_input.lower() == "provide_number":
+        result = "Be cautious! Providing sensitive information over the phone, especially in response to unsolicited calls, can lead to identity theft or financial fraud."
+        return result
+    elif  user_input.lower() == "refuse":
+        result = "Good decision! It's wise to refuse providing sensitive information over the phone, especially if you're unsure of the caller's identity."
+        return result        
+    elif  user_input.lower() == "who_created_you":
+        result = "I was created by team Cyber Squad"
+        return result          
+    
 
     else:
         if user_input.count('.') == 3:
@@ -278,13 +355,12 @@ def signin():
     username = request.form.get('username')
     password = request.form.get('password')
    
-   
 
     if username == valid_username and password == valid_password:
         # Successful login, redirect to a success page
         print("Successful login. Redirecting to service.html.")
         current_hour = datetime.now().hour
-        if current_hour >= 16:
+        if current_hour >= 11:
             notify.send("Somebody Logged In After Office Hour!")
             print("View your notifications at: ", notify.register())
         return render_template('index.html')
@@ -364,7 +440,7 @@ def testimonial():
 
 
 
-@app.route("/index")
+@app.route("/index.html")
 def index():
     return render_template('index.html')
 

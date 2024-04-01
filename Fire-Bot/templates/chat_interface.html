@@ -29,8 +29,8 @@
             <ul>
 
               <li>
-                <a href="../templates/index.html"> 
-                  <span class="link hide">Home</span>
+                <a href="index.html"><span class="link hide">Home</span></a>
+                  
                 </a>
               </li>
 
@@ -84,7 +84,7 @@
             </ul>
              
             <!-- img scan popup start-->
-            <div class="popup" id="portfolio-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="popup" id="portfolio-popup" style="width: 300px; height: 300px; background-color: rgb(255 24 0 ); padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Upload An Image</p>
               
@@ -102,7 +102,7 @@
             <!-- img scan popup end-->
             
             <!-- encrypt start-->
-            <div class="popup" id="analytics-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="popup" id="analytics-popup" style="width: 300px; height: 300px; background-color: rgb(255 24 0 ); padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter Text To Encrypt</p>
               <input type="text" id="textInput" placeholder="Enter text to encrypt">
@@ -113,7 +113,7 @@
             <!-- encrypt decrypt end-->
 
             <!-- decrypt start-->
-            <div class="popup" id="reports-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="popup" id="reports-popup" style="width: 300px; height: 300px; background-color: rgb(255 24 0); padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter File To Decrypt</p>
               <input type="file" id="fileInput">
@@ -126,7 +126,7 @@
             <!-- decrypt end-->
 
             <!-- hashing popup start-->
-            <div class="popup" id="dashboard-popup" style="width: 300px; height: 300px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="popup" id="dashboard-popup" style="width: 300px; height: 300px; background-color: rgb(255 24 0 ); padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">Enter Text For Hashing</p>
               <input type="text" id="hashInput" placeholder="Enter text to hash">
@@ -140,7 +140,7 @@
 
             <!-- more ka popup start-->
 
-            <div class="popup" id="more-popup" style="width: 500px; height: 450px; background-color: #cf4848; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <div class="popup" id="more-popup" style="width: 500px; height: 450px; background-color: #1ad766fa; padding: 20px; text-align: center; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
               <img src="{{ url_for('static', filename='/img/chat-icon.jpeg')}}" alt="Chat Icon" width="50px" height="50px" style="margin-bottom: 20px;">
               <p style="font-size: 18px; margin-bottom: 10px;">List of Commands</p>
               
@@ -290,8 +290,8 @@
 
 
                 // Display loading animation
-                chatContainer.append("<p class='loading'><video src='{{ url_for('static', filename='img/xy.mp4')}}' autoplay loop></video></p>");
-chatContainer.find('.loading').append("<p>Loading...</p>");
+                chatContainer.append("<p class='loading'><video src='{{ url_for('static', filename='img/xy.webm')}}' autoplay loop></video></p>");
+chatContainer.find('.loading').append("<p>Please Wait...</p>");
 
 
 

@@ -1,0 +1,100 @@
+{
+    "log_entries": [
+      {
+        "timestamp": "2024-03-28T12:00:00",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:01:15",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:02:30",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:03:45",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:04:55",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:06:00",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:06:00",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.167.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:06:00",
+        "event_type": "login_attempt",
+        "username": "user1",
+        "status": "failed",
+        "ip_address": "192.169.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:00:00",
+        "event_type": "user_created",
+        "username": "new_user",
+        "email": "new_user@example.com",
+        "ip_address": "192.168.1.200"
+      },
+      {
+        "timestamp": "2024-03-29T11:30:00",
+        "event_type": "user_deleted",
+        "username": "new_user",
+        "reason": "Account closure request",
+        "ip_address": "192.168.1.200"
+      },
+      {
+        "timestamp": "2024-03-28T12:00:00",
+        "event_type": "password_change",
+        "username": "user1",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:02:00",
+        "event_type": "password_change",
+        "username": "user1",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:04:00",
+        "event_type": "password_change",
+        "username": "user1",
+        "ip_address": "192.168.1.100"
+      },
+      {
+        "timestamp": "2024-03-28T12:06:00",
+        "event_type": "password_change",
+        "username": "user1",
+        "ip_address": "192.168.1.100"
+      }
+
+    ]
+  }
+  
