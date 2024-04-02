@@ -30,6 +30,10 @@ from datetime import datetime
 from notify_run import Notify
 import Brute_Detection
 import psutil
+import socket
+import sys
+import colorama
+from time import sleep
 
 notify = Notify()
 
@@ -46,6 +50,16 @@ def process_input(user_input):
     return "You said: " + user_input  # For demonstration purposes, echo back the recognized text
 
 
+def scan_ports(host, port_range):
+    open_ports = []
+    for port in range(port_range[0], port_range[1] + 1):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.settimeout(1)  # Adjust the timeout as needed
+        result = sock.connect_ex((host, port))
+        if result == 0:
+            open_ports.append(port)
+        sock.close()
+    return open_ports
 
 
 
@@ -79,6 +93,68 @@ def get_api_key():
 # Read API key from config.json
 api_key = get_api_key()
 
+
+
+
+colorama.init()
+
+def type(words: str):
+    for char in words:
+        sleep(0.015)
+        sys.stdout.write(char)
+        sys.stdout.flush()
+    print()
+
+  # Scan using multiple AV start
+
+def scan_file_with_virustotal(file_path):
+    url = r'https://www.virustotal.com/vtapi/v2/file/scan'
+    api = open("E:\\Fire-bot\\Fire-Bot\\vt-api.txt", "r").read()
+    params = {"apikey": api}
+    file_to_upload = {"file": open(file_path, "rb")}
+    response = requests.post(url, files=file_to_upload, params=params)
+    file_url = f"https://www.virustotal.com/api/v3/files/{response.json()['sha1']}"
+    headers = {"accept": "application/json", "x-apikey": api}
+    type(colorama.Fore.YELLOW + "Analysing....")
+    response = requests.get(file_url, headers=headers)
+    report = response.text
+    report = json.loads(report)
+    name = report["data"]["attributes"].get("meaningful_name", "unable to fetch")
+    hash_value = report["data"]["attributes"]["sha256"]
+    description = report["data"]["attributes"]["type_description"]
+    size = report["data"]["attributes"]["size"] * 10**-3
+    result = report["data"]["attributes"]["last_analysis_results"]
+    print()
+    type((colorama.Fore.WHITE + "Name : ", colorama.Fore.YELLOW + f"{name}"))
+    type((colorama.Fore.WHITE + "Size : ", colorama.Fore.YELLOW + f"{size} KB"))
+    type((colorama.Fore.WHITE + "Description : ", colorama.Fore.YELLOW + f"{description}"))
+    type((colorama.Fore.WHITE + "SHA-256 Hash : ", colorama.Fore.YELLOW + f"{hash_value}"))
+    malicious_count = 0
+    print()
+    for key, values in result.items():
+        key = colorama.Fore.WHITE + f'{key}'
+        verdict = values['category']
+        if verdict == 'undetected':
+            verdict = colorama.Fore.GREEN + 'undetected'
+        elif verdict == 'type-unsupported':
+            verdict = colorama.Fore.RED + 'type-unsupported'
+        elif verdict == 'malicious':
+            malicious_count += 1
+            verdict = colorama.Fore.RED + 'malicious'
+        else:
+            verdict = colorama.Fore.RED + f'{verdict}'
+        str = f'{key}: {verdict}'
+        type(str)
+        print()
+    if malicious_count != 0:
+        type(colorama.Back.WHITE + colorama.Fore.RED + f'\t\t\t\t{malicious_count} antivirus found the given file malicious !!')
+    elif malicious_count == 0:
+        type(colorama.Back.WHITE + colorama.Fore.GREEN + f'\t\t\t\t No antivirus found the given file malicious !!')
+    print(colorama.Back.BLACK + ' ')
+
+
+
+    # Scan using multiple AV end
 #Scan url
 
 def is_valid_url(url):
@@ -143,8 +219,8 @@ def ocr():
                         toast.show()
                         break  # Break out of loop after detecting unsafe URL
 
-            return render_template('chat_interface.html', text=text)
-    return render_template('chat_interface.html')
+            return render_template('signin.html', text=text)
+    return render_template('signin.html')
 
 
 
@@ -213,6 +289,9 @@ def process_input(user_input):
         file_path = input("Enter the path of the file to be scanned: ")  # Modify this for web input
         scan_result = scan_file_with_defender(file_path)
         return scan_result
+    if user_input.lower() == "multiple_av_scan":
+        file_path = input("Enter the path of the file to be scanned: ")
+        scan_file_with_virustotal(file_path)    
 
     elif user_input.lower() == "generate password for me":
         username = input("Enter your username: ")  # Modify this for web input
@@ -253,6 +332,20 @@ They claim there's a critical issue with your account and that your internet wil
 They ask you to download a remote access tool to 'fix the problem.'
 What would you do? (Reply with 'download_the_tool' or 'verify_caller')"""
      return result
+
+    elif user_input.lower() == "port scan":
+          host = 'localhost'  # or '127.0.0.1'
+          start_port = int(input("Enter the starting port: "))
+          end_port = int(input("Enter the ending port: "))
+          open_ports = scan_ports(host, (start_port, end_port))
+          if open_ports:
+            return open_ports
+            for port in open_ports:
+             return port 
+          else:
+            print("No open ports found.")
+
+
 
     elif user_input.lower() == "download_the_tool":
      result = "Uh oh! Downloading an unknown tool could grant the caller remote access to your computer, allowing them to steal your data or install malware. Never download software from unsolicited sources."

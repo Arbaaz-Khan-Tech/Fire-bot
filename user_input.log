@@ -3872,3 +3872,309 @@
 2024-04-01 14:30:11,292 - 127.0.0.1 - - [01/Apr/2024 14:30:11] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
 2024-04-01 14:30:11,294 - 127.0.0.1 - - [01/Apr/2024 14:30:11] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
 2024-04-01 14:30:11,309 - 127.0.0.1 - - [01/Apr/2024 14:30:11] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:32,447 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-01 15:53:32,450 - [33mPress CTRL+C to quit[0m
+2024-04-01 15:53:32,454 -  * Restarting with stat
+2024-04-01 15:53:37,312 -  * Debugger is active!
+2024-04-01 15:53:37,312 -  * Debugger PIN: 121-376-890
+2024-04-01 15:53:44,872 - 127.0.0.1 - - [01/Apr/2024 15:53:44] "GET / HTTP/1.1" 200 -
+2024-04-01 15:53:45,649 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,662 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,674 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,684 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,687 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,690 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,710 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,714 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,726 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,734 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,743 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 15:53:45,745 - 127.0.0.1 - - [01/Apr/2024 15:53:45] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-01 15:53:54,335 - 127.0.0.1 - - [01/Apr/2024 15:53:54] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-01 15:56:34,770 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-01 15:56:35,390 -  * Restarting with stat
+2024-04-01 15:56:40,818 -  * Debugger is active!
+2024-04-01 15:56:40,829 -  * Debugger PIN: 121-376-890
+2024-04-01 15:56:42,429 - 127.0.0.1 - - [01/Apr/2024 15:56:42] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-01 15:56:44,150 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "GET / HTTP/1.1" 200 -
+2024-04-01 15:56:44,230 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,244 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,245 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,248 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,264 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,272 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,281 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,285 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,295 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,300 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,314 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,314 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 15:56:44,330 - 127.0.0.1 - - [01/Apr/2024 15:56:44] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-04-01 15:57:41,225 - 127.0.0.1 - - [01/Apr/2024 15:57:41] "POST /chat HTTP/1.1" 200 -
+2024-04-01 15:57:46,399 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "GET / HTTP/1.1" 200 -
+2024-04-01 15:57:46,488 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,501 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,502 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,528 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,534 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,542 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,550 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,566 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,573 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,581 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,586 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,593 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 15:57:46,617 - 127.0.0.1 - - [01/Apr/2024 15:57:46] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-04-01 15:57:47,983 - 127.0.0.1 - - [01/Apr/2024 15:57:47] "POST /chat HTTP/1.1" 200 -
+2024-04-01 15:57:48,680 - 127.0.0.1 - - [01/Apr/2024 15:57:48] "POST /chat HTTP/1.1" 200 -
+2024-04-01 15:57:53,099 - 127.0.0.1 - - [01/Apr/2024 15:57:53] "POST /chat HTTP/1.1" 200 -
+2024-04-01 15:58:04,781 - 127.0.0.1 - - [01/Apr/2024 15:58:04] "POST /chat HTTP/1.1" 200 -
+2024-04-01 16:00:12,474 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-01 16:00:13,108 -  * Restarting with stat
+2024-04-01 16:03:31,637 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-01 16:03:31,637 - [33mPress CTRL+C to quit[0m
+2024-04-01 16:03:31,642 -  * Restarting with stat
+2024-04-01 16:03:37,264 -  * Debugger is active!
+2024-04-01 16:03:37,272 -  * Debugger PIN: 121-376-890
+2024-04-01 16:03:37,318 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "GET / HTTP/1.1" 200 -
+2024-04-01 16:03:37,723 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,727 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,741 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,749 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,762 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,773 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,778 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,786 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,788 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,796 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,810 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,820 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 16:03:37,847 - 127.0.0.1 - - [01/Apr/2024 16:03:37] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-04-01 16:03:44,029 - 127.0.0.1 - - [01/Apr/2024 16:03:44] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-01 16:04:05,302 - 127.0.0.1 - - [01/Apr/2024 16:04:05] "POST /chat HTTP/1.1" 200 -
+2024-04-01 16:05:21,294 - 127.0.0.1 - - [01/Apr/2024 16:05:21] "POST /chat HTTP/1.1" 200 -
+2024-04-01 16:06:41,505 - 127.0.0.1 - - [01/Apr/2024 16:06:41] "POST /chat HTTP/1.1" 200 -
+2024-04-01 16:08:52,502 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-01 16:08:53,027 -  * Restarting with stat
+2024-04-01 16:08:58,039 -  * Debugger is active!
+2024-04-01 16:08:58,046 -  * Debugger PIN: 121-376-890
+2024-04-01 16:08:59,762 - 127.0.0.1 - - [01/Apr/2024 16:08:59] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-01 16:09:01,805 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "GET / HTTP/1.1" 200 -
+2024-04-01 16:09:01,894 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,905 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,909 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,918 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,928 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,945 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,962 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,963 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,967 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,990 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 16:09:01,990 - 127.0.0.1 - - [01/Apr/2024 16:09:01] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 16:09:02,004 - 127.0.0.1 - - [01/Apr/2024 16:09:02] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-01 16:09:02,067 - 127.0.0.1 - - [01/Apr/2024 16:09:02] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-04-01 16:09:24,313 - 127.0.0.1 - - [01/Apr/2024 16:09:24] "POST /chat HTTP/1.1" 200 -
+2024-04-01 16:09:34,397 - 127.0.0.1 - - [01/Apr/2024 16:09:34] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-01 16:10:48,473 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-01 16:10:49,034 -  * Restarting with stat
+2024-04-01 16:10:54,428 -  * Debugger is active!
+2024-04-01 16:10:54,428 -  * Debugger PIN: 121-376-890
+2024-04-01 16:10:54,553 - 127.0.0.1 - - [01/Apr/2024 16:10:54] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-01 16:11:13,588 - 127.0.0.1 - - [01/Apr/2024 16:11:13] "POST /chat HTTP/1.1" 200 -
+2024-04-01 16:48:30,176 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-01 16:48:30,176 - [33mPress CTRL+C to quit[0m
+2024-04-01 16:48:30,176 -  * Restarting with stat
+2024-04-01 16:48:33,881 -  * Debugger is active!
+2024-04-01 16:48:33,881 -  * Debugger PIN: 121-376-890
+2024-04-01 16:57:52,452 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "GET / HTTP/1.1" 200 -
+2024-04-01 16:57:52,746 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,747 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,785 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,785 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,800 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,852 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,885 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,889 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,889 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,941 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,943 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-01 16:57:52,945 - 127.0.0.1 - - [01/Apr/2024 16:57:52] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,746 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "GET / HTTP/1.1" 200 -
+2024-04-01 16:57:58,824 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,824 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,827 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,828 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,843 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,843 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,859 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,890 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,890 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,906 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,906 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 16:57:58,921 - 127.0.0.1 - - [01/Apr/2024 16:57:58] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,143 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "GET /index.html HTTP/1.1" 200 -
+2024-04-01 16:58:02,210 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/lib/flaticon/font/flaticon.css HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,213 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/lib/animate/animate.min.css HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,219 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,221 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,232 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,241 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/slider1.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,241 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/slider2.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,261 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,269 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/slider3.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,277 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/about%20us.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,327 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/lib/wow/wow.min.js HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,327 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/lib/easing/easing.min.js HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,384 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/lib/waypoints/waypoints.min.js HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,387 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,397 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-automated%20response.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,422 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,433 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20ip%20info.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,436 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20url%20scanner.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,438 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20camera%20scanning.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,455 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20network%20traffic.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,463 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20password.jpg HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,474 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20crypto.png HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,487 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20file%20scann.png HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,494 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[33mGET /img/blog-1.jpg HTTP/1.1[0m" 404 -
+2024-04-01 16:58:02,502 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20speech%20recog.png HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,512 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[33mGET /img/blog-2.jpg HTTP/1.1[0m" 404 -
+2024-04-01 16:58:02,529 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/services-%20image%20scann.png HTTP/1.1[0m" 304 -
+2024-04-01 16:58:02,549 - 127.0.0.1 - - [01/Apr/2024 16:58:02] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:39,588 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-01 18:24:39,589 - [33mPress CTRL+C to quit[0m
+2024-04-01 18:24:39,595 -  * Restarting with stat
+2024-04-01 18:24:45,638 -  * Debugger is active!
+2024-04-01 18:24:45,649 -  * Debugger PIN: 121-376-890
+2024-04-01 18:24:45,694 - 127.0.0.1 - - [01/Apr/2024 18:24:45] "GET / HTTP/1.1" 200 -
+2024-04-01 18:24:46,215 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,228 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,246 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,247 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,264 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,284 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,284 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,300 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,300 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,308 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,313 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-01 18:24:46,329 - 127.0.0.1 - - [01/Apr/2024 18:24:46] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-02 10:06:39,093 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-04-02 10:06:39,095 - [33mPress CTRL+C to quit[0m
+2024-04-02 10:06:39,098 -  * Restarting with stat
+2024-04-02 10:06:45,740 -  * Debugger is active!
+2024-04-02 10:06:45,755 -  * Debugger PIN: 121-376-890
+2024-04-02 10:06:45,907 - 127.0.0.1 - - [02/Apr/2024 10:06:45] "GET / HTTP/1.1" 200 -
+2024-04-02 10:06:45,923 - 127.0.0.1 - - [02/Apr/2024 10:06:45] "GET / HTTP/1.1" 200 -
+2024-04-02 10:06:46,629 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,655 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,656 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,715 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,716 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,762 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,813 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,814 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,840 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,853 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-02 10:06:46,987 - 127.0.0.1 - - [02/Apr/2024 10:06:46] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:06:47,005 - 127.0.0.1 - - [02/Apr/2024 10:06:47] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:06:47,037 - 127.0.0.1 - - [02/Apr/2024 10:06:47] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-04-02 10:06:54,078 - 127.0.0.1 - - [02/Apr/2024 10:06:54] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-02 10:07:02,909 - 127.0.0.1 - - [02/Apr/2024 10:07:02] "POST /chat HTTP/1.1" 200 -
+2024-04-02 10:07:34,097 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-02 10:07:34,707 -  * Restarting with stat
+2024-04-02 10:07:40,946 -  * Debugger is active!
+2024-04-02 10:07:40,953 -  * Debugger PIN: 121-376-890
+2024-04-02 10:07:41,002 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "GET / HTTP/1.1" 200 -
+2024-04-02 10:07:41,745 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,761 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,775 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,787 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,796 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,804 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,808 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,809 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,812 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,828 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,828 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,934 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:07:41,954 - 127.0.0.1 - - [02/Apr/2024 10:07:41] "[36mGET /static/img/favicon.ico HTTP/1.1[0m" 304 -
+2024-04-02 10:09:10,329 - 127.0.0.1 - - [02/Apr/2024 10:09:10] "POST /chat HTTP/1.1" 200 -
+2024-04-02 10:09:47,449 - 127.0.0.1 - - [02/Apr/2024 10:09:47] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-02 10:11:27,369 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-02 10:11:27,869 -  * Restarting with stat
+2024-04-02 10:11:33,665 -  * Debugger is active!
+2024-04-02 10:11:33,680 -  * Debugger PIN: 121-376-890
+2024-04-02 10:11:34,666 - 127.0.0.1 - - [02/Apr/2024 10:11:34] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-02 10:11:41,887 - 127.0.0.1 - - [02/Apr/2024 10:11:41] "POST /chat HTTP/1.1" 200 -
+2024-04-02 10:12:13,726 - 127.0.0.1 - - [02/Apr/2024 10:12:13] "[35m[1mPOST /chat HTTP/1.1[0m" 500 -
+2024-04-02 10:13:29,043 - 127.0.0.1 - - [02/Apr/2024 10:13:29] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-02 10:13:41,484 - 127.0.0.1 - - [02/Apr/2024 10:13:41] "POST /chat HTTP/1.1" 200 -
+2024-04-02 10:15:18,854 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-02 10:15:19,884 -  * Restarting with stat
+2024-04-02 10:15:26,479 -  * Debugger is active!
+2024-04-02 10:15:26,494 -  * Debugger PIN: 121-376-890
+2024-04-02 10:15:26,800 - 127.0.0.1 - - [02/Apr/2024 10:15:26] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-02 10:16:32,531 - 127.0.0.1 - - [02/Apr/2024 10:16:32] "POST /chat HTTP/1.1" 200 -
+2024-04-02 10:16:44,641 - 127.0.0.1 - - [02/Apr/2024 10:16:44] "[35m[1mGET /static/img/xy.webm HTTP/1.1[0m" 206 -
+2024-04-02 10:17:21,682 -  * Detected change in 'e:\\Fire-bot\\Fire-Bot\\App.py', reloading
+2024-04-02 10:17:22,180 -  * Restarting with stat
+2024-04-02 10:17:27,359 -  * Debugger is active!
+2024-04-02 10:17:27,365 -  * Debugger PIN: 121-376-890
+2024-04-02 10:17:35,126 - 127.0.0.1 - - [02/Apr/2024 10:17:35] "GET / HTTP/1.1" 200 -
+2024-04-02 10:17:35,691 - 127.0.0.1 - - [02/Apr/2024 10:17:35] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-04-02 10:17:35,711 - 127.0.0.1 - - [02/Apr/2024 10:17:35] "[36mGET /static/js/signin.js HTTP/1.1[0m" 304 -
+2024-04-02 10:17:35,889 - 127.0.0.1 - - [02/Apr/2024 10:17:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-04-02 10:17:43,336 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "POST /signin HTTP/1.1" 200 -
+2024-04-02 10:17:43,417 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/lib/flaticon/font/flaticon.css HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,455 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/lib/animate/animate.min.css HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,465 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,465 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,476 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/lib/owlcarousel/assets/owl.carousel.min.css HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,486 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/logo.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,525 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/slider2.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,533 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/slider1.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,632 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/slider3.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,649 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/about%20us.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,705 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/lib/easing/easing.min.js HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,833 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,850 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/lib/wow/wow.min.js HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,864 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/lib/waypoints/waypoints.min.js HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,867 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/services-automated%20response.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,896 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/lib/owlcarousel/owl.carousel.min.js HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,919 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/services-%20url%20scanner.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,922 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/services-%20ip%20info.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,954 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/services-%20camera%20scanning.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,959 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/services-%20password.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:43,982 - 127.0.0.1 - - [02/Apr/2024 10:17:43] "[36mGET /static/img/services-%20network%20traffic.jpg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:44,008 - 127.0.0.1 - - [02/Apr/2024 10:17:44] "[36mGET /static/img/services-%20crypto.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:44,016 - 127.0.0.1 - - [02/Apr/2024 10:17:44] "[36mGET /static/img/services-%20file%20scann.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:44,054 - 127.0.0.1 - - [02/Apr/2024 10:17:44] "[33mGET /img/blog-1.jpg HTTP/1.1[0m" 404 -
+2024-04-02 10:17:44,056 - 127.0.0.1 - - [02/Apr/2024 10:17:44] "[36mGET /static/img/services-%20image%20scann.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:44,070 - 127.0.0.1 - - [02/Apr/2024 10:17:44] "[36mGET /static/img/services-%20speech%20recog.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:44,073 - 127.0.0.1 - - [02/Apr/2024 10:17:44] "[33mGET /img/blog-2.jpg HTTP/1.1[0m" 404 -
+2024-04-02 10:17:44,535 - 127.0.0.1 - - [02/Apr/2024 10:17:44] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,228 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "GET /chat_interface.html HTTP/1.1" 200 -
+2024-04-02 10:17:48,274 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/css/chat_interface.css HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,279 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/assets/home.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,289 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/assets/image%20scan.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,298 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/assets/encrypt.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,302 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/assets/decrypt.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,322 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/assets/help.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,324 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/img/sun.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,326 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/assets/hashing.svg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,344 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/img/paper-plane.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,347 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/img/chat-icon.jpeg HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,348 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/img/moon.png HTTP/1.1[0m" 304 -
+2024-04-02 10:17:48,363 - 127.0.0.1 - - [02/Apr/2024 10:17:48] "[36mGET /static/img/microphone.png HTTP/1.1[0m" 304 -
+2024-04-02 10:18:19,005 - 127.0.0.1 - - [02/Apr/2024 10:18:19] "POST / HTTP/1.1" 200 -
+2024-04-02 10:18:19,075 - 127.0.0.1 - - [02/Apr/2024 10:18:19] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-04-02 10:18:19,109 - 127.0.0.1 - - [02/Apr/2024 10:18:19] "[36mGET /static/js/signin.js HTTP/1.1[0m" 304 -
+2024-04-02 10:18:42,292 - 127.0.0.1 - - [02/Apr/2024 10:18:42] "POST / HTTP/1.1" 200 -
+2024-04-02 10:18:42,399 - 127.0.0.1 - - [02/Apr/2024 10:18:42] "[36mGET /static/css/signin.css HTTP/1.1[0m" 304 -
+2024-04-02 10:18:42,409 - 127.0.0.1 - - [02/Apr/2024 10:18:42] "[36mGET /static/js/signin.js HTTP/1.1[0m" 304 -
