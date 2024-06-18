@@ -113,7 +113,7 @@ def perform_capture():
     Function to perform the entire network traffic capture process.
     """
     start_capture(WIFI_INTERFACE, CAPTURE_FILE)
-    time.sleep(30)  # Capture for 60 seconds
+    time.sleep(15)  # Capture for 60 seconds
     stop_capture()
 
     # Analyze captured traffic and generate report

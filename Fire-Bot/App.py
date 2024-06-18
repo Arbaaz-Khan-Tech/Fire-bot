@@ -61,6 +61,26 @@ def scan_ports(host, port_range):
         sock.close()
     return open_ports
 
+def count_tabs(app_name):
+    count = 0
+    for proc in psutil.process_iter(['pid', 'name']):
+        if app_name.lower() in proc.info['name'].lower():
+            count += 1
+    return count
+
+def terminate_excess_tabs(app_name, target_count):
+    current_count = count_tabs(app_name)
+    excess_count = current_count - target_count
+    if excess_count > 0:
+        for proc in psutil.process_iter():
+            if app_name.lower() in proc.name().lower():
+                proc.terminate()
+                excess_count -= 1
+                if excess_count == 0:
+                    break
+
+
+
 
 
 logging.basicConfig(filename='user_input.log', level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -251,11 +271,9 @@ safety_settings = [
     },
 ]
 
-model = genai.GenerativeModel(
-    model_name="gemini-pro",
-    generation_config=generation_config,
-    safety_settings=safety_settings
-)
+model = genai.GenerativeModel(model_name="gemini-pro")
+chat = model.start_chat(history=[])
+
 
 # Function to generate password
 def generate_password(username):
@@ -264,7 +282,15 @@ def generate_password(username):
 # Function to generate AI response
 def generate_ai_response(user_input):
     response = model.generate_content([user_input])
-    return "AI: " + response.text
+    # Check if the response is a JSON response
+    if isinstance(response, dict):
+        # Assume it's a JSON response
+        # Extract the text from the JSON response
+        text = response.get('text', '')  # Adjust this based on the actual structure of the JSON response
+        return " " + text
+    else:
+        # Assume it's a plain text response
+        return " " + response.text
 
 # Function to process user input
 def process_input(user_input):
@@ -291,7 +317,10 @@ def process_input(user_input):
         return scan_result
     if user_input.lower() == "multiple_av_scan":
         file_path = input("Enter the path of the file to be scanned: ")
-        scan_file_with_virustotal(file_path)    
+        scan_file_with_virustotal(file_path)  
+        result = "File Scanned Succesully"
+        return result
+          
 
     elif user_input.lower() == "generate password for me":
         username = input("Enter your username: ")  # Modify this for web input
@@ -345,6 +374,12 @@ What would you do? (Reply with 'download_the_tool' or 'verify_caller')"""
           else:
             print("No open ports found.")
 
+    elif user_input.lower() == "terminate":
+        app_name = "notepad.exe"
+        target_count = 3  # Desired number of tabs
+        terminate_excess_tabs(app_name, target_count)
+        result = "Excess tabs terminated."
+        return result
 
 
     elif user_input.lower() == "download_the_tool":
@@ -380,6 +415,14 @@ What's a potential consequence of this action? (Reply with 'malware_infection' o
     elif  user_input.lower() == "who_created_you":
         result = "I was created by team Cyber Squad"
         return result          
+
+    elif user_input.lower() == "what is malware":
+      result = """Malware, short for malicious software, refers to any intrusive software developed by cybercriminals (often called hackers) to steal data and damage or destroy computers and computer systems. Examples of common malware include viruses, worms, Trojan viruses, spyware, adware, and ransomware. Recent malware attacks have exfiltrated data in mass amounts"""
+      return result
+
+    elif user_input.lower() == "what is virus":
+      result = """A computer virus is a type of program that, much like a regular virus, attaches itself to a host with the intention of multiplying and spreading its infection further. Computer viruses can be created by anyone with the proper skill set, from individuals to major organizations, and can infect computers, smartphones, tablets, and even smart cars."""
+      return result 
     
 
     else:
@@ -441,7 +484,7 @@ def helloworld():
 valid_username = 'FireBot@gmail.com'
 valid_password = '123'
 
-
+ 
 
 @app.route('/signin', methods=['POST'])
 def signin():
@@ -453,7 +496,7 @@ def signin():
         # Successful login, redirect to a success page
         print("Successful login. Redirecting to service.html.")
         current_hour = datetime.now().hour
-        if current_hour >= 11:
+        if current_hour >= 11:              # office hour 
             notify.send("Somebody Logged In After Office Hour!")
             print("View your notifications at: ", notify.register())
         return render_template('index.html')
@@ -528,7 +571,7 @@ def team():
 @app.route("/testimonial.html")
 def testimonial():
     
-    return render_template('testimonial.html')  
+    return render_template('testimonial.html') 
 
 
 
@@ -539,6 +582,7 @@ def index():
 
 
     
+
 
 
 
