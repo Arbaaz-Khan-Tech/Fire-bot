@@ -1,4 +1,4 @@
-FireBot: Your Comprehensive Cybersecurity Chatbot
+# FireBot: Your Comprehensive Cybersecurity Chatbot
 Introduction
 
 FireBot is a robust and user-friendly cybersecurity chatbot designed to empower individuals and organizations to navigate the ever-evolving landscape of online security threats. It offers a diverse set of features to protect, detect, and educate users on various cybersecurity concerns, promoting a safer digital experience.
